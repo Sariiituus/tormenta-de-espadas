@@ -1,7 +1,9 @@
 import Home from "../components/Home/Home";
 import Info from "../components/Info/Info";
+import Gallery from "../components/Gallery/Gallery";
+import galleryData from "../components/Gallery/GalleryData";
 
-export function getRoutes(datosHome, datosInfo) {
+export function getRoutes(datosHome, datosInfo, galleryData) {
   return {
     routesPublicWebsite: [
       {
@@ -17,7 +19,7 @@ export function getRoutes(datosHome, datosInfo) {
       {
         name: "Galería",
         path: "/gallery",
-        element: <Home datos={datosHome} />
+        element: <Gallery galleryData={galleryData} />
       },
       {
         name: "Formulario",

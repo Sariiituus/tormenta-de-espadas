@@ -9,11 +9,11 @@ const NavBar = (props) => {
   const routesToRender = isLoggedIn ? routes.routesPrivateWebsite : routes.routesPublicWebsite;
 
   return (
-    <nav className='NavBar-navbar'>
-      <ul className='NavBar-menu'>
+    <nav className='navBar-navbar'>
+      <ul className='navBar-menu'>
         {routesToRender.map((route) => {
           return (
-            <li className='NavBar-menu-item' key={route.path}>
+            <li className='navBar-menu-item' key={route.path}>
               <Link to={route.path}>{route.name}</Link>
             </li>
           );
