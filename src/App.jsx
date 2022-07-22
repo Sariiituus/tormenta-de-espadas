@@ -28,7 +28,6 @@ function App() {
             {routesToAdd.map((route) => {
               return <Route path={route.path} element={route.element} key={route.path} />;
             })}
-            <Route path='*'><h1>Soldado, ¿te has perdido en el camino?</h1></Route>
           </Routes>
         </main>
         <footer className='App-Footer'>Pie de página</footer>
