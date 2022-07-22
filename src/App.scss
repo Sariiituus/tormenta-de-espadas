@@ -1,0 +1,24 @@
+.app {
+  text-align: center;
+  min-height: 100vh;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.app-header {
+  background-color: blue;
+  display: flex;
+}
+
+
+.app-content {
+  background-color: beige;
+  display: flex;
+  flex-grow: 1;
+}
+
+.app-footer {
+  background-color: red;
+  display: flex;
+}
