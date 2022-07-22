@@ -1,4 +1,4 @@
-.App {
+.app {
   text-align: center;
   min-height: 100vh;
 
@@ -6,19 +6,19 @@
   flex-direction: column;
 }
 
-.App-Header {
+.app-header {
   background-color: blue;
   display: flex;
 }
 
 
-.App-Content {
+.app-content {
   background-color: beige;
   display: flex;
   flex-grow: 1;
 }
 
-.App-Footer {
+.app-footer {
   background-color: red;
   display: flex;
 }

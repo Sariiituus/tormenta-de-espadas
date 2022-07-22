@@ -9,26 +9,26 @@ const routes = getRoutes(
   allData.info
 );
 
-function App() {
+const App = () => {
 
-  let isLoggedIn = false; // TODO: Sacarlo del estado o sacarlo de redux;
+  let isLoggedIn = true; // TODO: Sacarlo del estado o sacarlo de redux;
 
   const routesToAdd = isLoggedIn ? routes.routesPrivateWebsite : routes.routesPublicWebsite;
 
   return (
-    <div className='App'>
+    <div className='app'>
       <Router>
-        <header className='App-Header'>
+        <header className='app-header'>
           <NavBar routes={routes} isLoggedIn={isLoggedIn}></NavBar>
         </header>
-        <main className='App-Content'>
+        <main className='app-content'>
           <Routes>
             {routesToAdd.map((route) => {
               return <Route path={route.path} element={route.element} key={route.path} />;
             })}
           </Routes>
         </main>
-        <footer className='App-Footer'>Pie de pagina</footer>
+        <footer className='app-footer'>Pie de pagina</footer>
       </Router>
     </div>
   );
