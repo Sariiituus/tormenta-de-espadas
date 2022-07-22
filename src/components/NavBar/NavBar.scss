@@ -1,17 +1,17 @@
-.NavBar-navbar {
+.navBar-navbar {
     display: flex;
     flex-direction: column;
     flex-grow: 1;
 }
 
-.NavBar-menu {
+.navBar-menu {
     display: flex;
     flex-grow: 1;
     list-style-type: none;
     justify-content: space-evenly;
 }
 
-.NavBar-menu-item {
+.navBar-menu-item {
     & a, a:hover, a:focus, a:active {
         text-decoration: none;
         color: inherit;

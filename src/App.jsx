@@ -8,12 +8,12 @@ import galleryData from "./components/Gallery/GalleryData.js"
 const routes = getRoutes(
   allData.home,
   allData.info,
-  galleryData,
+  galleryData
 );
 
 const App = () => {
 
-  let isLoggedIn = true; // TODO: Sacarlo del estado o sacarlo de redux;
+  let isLoggedIn = false; // TODO: Sacarlo del estado o sacarlo de redux;
 
   const routesToAdd = isLoggedIn ? routes.routesPrivateWebsite : routes.routesPublicWebsite;
 

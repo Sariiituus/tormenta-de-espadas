@@ -5,6 +5,7 @@ import { useState } from "react";
 const Gallery = ({ galleryData }) => {
   const [currentImage, setCurrentImage] = useState(0);
   const length = galleryData.length;
+  console.log("hola");
 
   const nextImage = () => {
     setCurrentImage(currentImage === length - 1 ? 0 : currentImage + 1);
