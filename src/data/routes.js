@@ -1,13 +1,66 @@
-import Home from '../components/Home/Home';
+import Home from "../components/Home/Home";
+import Info from "../components/Info/Info";
 
-export const routes = [
-    {
-        "name": "Home", "path": "/", element: <Home />
-    },
-    {
-        "name": "Info", "path": "/info", element: <Home />
-    },
-    {
-        "name": "Galería", "path": "/gallery", element: <Home />
-    }
-]
+export function getRoutes(datosHome, datosInfo) {
+  return {
+    routesPublicWebsite: [
+      {
+        name: "Home",
+        path: "/",
+        element: <Home datos={datosHome} />
+      },
+      {
+        name: "Info",
+        path: "/info",
+        element: <Info datos={datosInfo} />
+      },
+      {
+        name: "Galería",
+        path: "/gallery",
+        element: <Home datos={datosHome} />
+      },
+      {
+        name: "Formulario",
+        path: "/form",
+        element: <Home datos={datosHome} />
+      },
+      {
+        name: "Login",
+        path: "/login",
+        element: <Home datos={datosHome} />
+      }
+    ],
+    routesPrivateWebsite: [
+      {
+        name: "Home",
+        path: "/",
+        element: <Home datos={datosHome} />
+      },
+      {
+        name: "Info",
+        path: "/info",
+        element: <Info datos={datosInfo} />
+      },
+      {
+        name: "Galería",
+        path: "/gallery",
+        element: <Home datos={datosHome} />
+      },
+      {
+        name: "Edita tu personaje",
+        path: "/edit",
+        element: <Home datos={datosHome} />
+      },
+      {
+        name: "Quiz",
+        path: "/quiz",
+        element: <Home datos={datosHome} />
+      },
+      {
+        name: "Logout",
+        path: "/logout",
+        element: <Home datos={datosHome} />
+      }
+    ]
+  }
+}

@@ -1,8 +1,13 @@
 import React from 'react'
 
-const Home = () => {
+const Home = (props) => {
+  const { datos } = props;
   return (
-    <div>Home</div>
+    <div>
+      <div>{ datos.titulo }</div>
+      <p>{ datos.parrafoUno }</p>
+      <p>{ datos.parrafoDos }</p>
+    </div>
   )
 }
 
