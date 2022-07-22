@@ -3,10 +3,12 @@ import NavBar from "./components/NavBar/NavBar";
 import { Route, Routes, BrowserRouter as Router } from "react-router-dom";
 import { getRoutes } from "./data/routes";
 import { allData } from "./data/data";
+import galleryData from "./components/Gallery/GalleryData.js"
 
 const routes = getRoutes(
   allData.home,
-  allData.info
+  allData.info,
+  galleryData,
 );
 
 function App() {
@@ -26,9 +28,10 @@ function App() {
             {routesToAdd.map((route) => {
               return <Route path={route.path} element={route.element} key={route.path} />;
             })}
+            <Route path='*'><h1>Soldado, ¿te has perdido en el camino?</h1></Route>
           </Routes>
         </main>
-        <footer className='App-Footer'>Pie de pagina</footer>
+        <footer className='App-Footer'>Pie de página</footer>
       </Router>
     </div>
   );
