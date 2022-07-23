@@ -13,6 +13,7 @@ const NavBar = (props) => {
       <ul className='navBar-menu'>
         {routesToRender.map((route) => {
           return (
+            
             <li className='navBar-menu-item' key={route.path}>
               <Link to={route.path}>{route.name}</Link>
             </li>
