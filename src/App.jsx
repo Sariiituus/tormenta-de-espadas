@@ -20,9 +20,11 @@ const App = () => {
   return (
     <div className='app'>
       <Router>
+        
         <header className='app-header'>
           <NavBar routes={routes} isLoggedIn={isLoggedIn}></NavBar>
         </header>
+        
         <main className='app-content'>
           <Routes>
             {routesToAdd.map((route) => {
@@ -30,7 +32,9 @@ const App = () => {
             })}
           </Routes>
         </main>
+        
         <footer className='app-footer'>Pie de pagina</footer>
+
       </Router>
     </div>
   );

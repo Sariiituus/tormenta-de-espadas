@@ -1,20 +1,29 @@
+@font-face {
+  font-family: ring-bearer;
+  src: url(../../../public/assets/fonts/ring-bearer.TTF);
+}
+
 .navBar-navbar {
     display: flex;
-    flex-direction: column;
-    flex-grow: 1;
+}
+
+.logo{
+    width: 50px;
 }
 
 .navBar-menu {
     display: flex;
     flex-grow: 1;
     list-style-type: none;
-    justify-content: space-evenly;
+    justify-content: flex-end;
 }
 
 .navBar-menu-item {
     & a, a:hover, a:focus, a:active {
+        font-family: ring-bearer;
         text-decoration: none;
-        color: inherit;
+        color: black;
+        margin-right: 2em;
     }
-}
+} 
 
