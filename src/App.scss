@@ -1,24 +1,24 @@
 .app {
-  text-align: center;
-  min-height: 100vh;
-
-  display: flex;
-  flex-direction: column;
+  
 }
 
 .app-header {
-  background-color: blue;
-  display: flex;
+  background-color: #EDD396;
+  text-align: right;
 }
 
 
 .app-content {
-  background-color: beige;
-  display: flex;
-  flex-grow: 1;
+  background-color: #90AA97;
+  
 }
 
 .app-footer {
-  background-color: red;
-  display: flex;
+  position: fixed;
+  height: 50px;
+  background-color: #242246;
+  color: white;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
 }

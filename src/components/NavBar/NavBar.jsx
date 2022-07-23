@@ -10,15 +10,23 @@ const NavBar = (props) => {
 
   return (
     <nav className='NavBar-navbar'>
+      
+      <div>
+      <img src='../../../public/assets/icons/logo-white-bg.svg' alt=""/>
+      </div>
+      
       <ul className='NavBar-menu'>
         {routesToRender.map((route) => {
           return (
+          
             <li className='NavBar-menu-item' key={route.path}>
               <Link to={route.path}>{route.name}</Link>
             </li>
+           
           );
         })}
       </ul>
+
     </nav>
   );
 };
