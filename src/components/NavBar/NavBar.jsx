@@ -12,7 +12,7 @@ const NavBar = (props) => {
     <nav className='navBar-navbar'>
       
       <div>
-      <img src='./public/assets/icons/logo-white-bg.svg' className="logo" alt=""/>
+        <img src='./assets/icons/logo-white-bg.svg' className="logo" alt=""/>
       </div>
       
       <ul className='navBar-menu'>

@@ -5,6 +5,8 @@ export const allData = {
     parrafoDos: "Adios que tal.....",
   },
   info: {
+    titulo: "Hola que tal",
+    subtitulo: "adios",
     nombre: "Sara",
     bootcamp: "Upgrade",
   },

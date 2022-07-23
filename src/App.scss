@@ -1,8 +1,12 @@
 .app {
-  
+  display: flex;
+  flex-direction: column;
+  flex: 1;
 }
 
 .app-header {
+  display: flex;
+  flex-direction: column;
   background-color: #EDD396;
   text-align: right;
 }
@@ -10,15 +14,15 @@
 
 .app-content {
   background-color: #90AA97;
-  
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
 }
 
 .app-footer {
-  position: fixed;
-  height: 50px;
+  display: flex;
+  flex-direction: column;
   background-color: #242246;
   color: white;
-  bottom: 0px;
-  left: 0px;
-  right: 0px;
+  padding: 2em;
 }
