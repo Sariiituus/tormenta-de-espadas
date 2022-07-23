@@ -9,17 +9,17 @@ const NavBar = (props) => {
   const routesToRender = isLoggedIn ? routes.routesPrivateWebsite : routes.routesPublicWebsite;
 
   return (
-    <nav className='NavBar-navbar'>
+    <nav className='navBar-navbar'>
       
       <div>
-      <img src='../../../public/assets/icons/logo-white-bg.svg' alt=""/>
+      <img src='./public/assets/icons/logo-white-bg.svg' className="logo" alt=""/>
       </div>
       
-      <ul className='NavBar-menu'>
+      <ul className='navBar-menu'>
         {routesToRender.map((route) => {
           return (
           
-            <li className='NavBar-menu-item' key={route.path}>
+            <li className='navBar-menu-item' key={route.path}>
               <Link to={route.path}>{route.name}</Link>
             </li>
            
