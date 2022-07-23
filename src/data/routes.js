@@ -1,7 +1,6 @@
 import Home from "../components/Home/Home";
 import Info from "../components/Info/Info";
 import Gallery from "../components/Gallery/Gallery";
-import galleryData from "../components/Gallery/GalleryData";
 
 export function getRoutes(datosHome, datosInfo, galleryData) {
   return {
@@ -46,7 +45,7 @@ export function getRoutes(datosHome, datosInfo, galleryData) {
       {
         name: "Galería",
         path: "/gallery",
-        element: <Home datos={datosHome} />
+        element: <Gallery galleryData={galleryData} />
       },
       {
         name: "Edita tu personaje",
