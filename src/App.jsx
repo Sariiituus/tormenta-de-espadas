@@ -3,15 +3,17 @@ import NavBar from "./components/NavBar/NavBar";
 import { Route, Routes, BrowserRouter as Router } from "react-router-dom";
 import { getRoutes } from "./data/routes";
 import { allData } from "./data/data";
+import galleryData from "./components/Gallery/GalleryData.js"
 
 const routes = getRoutes(
   allData.home,
-  allData.info
+  allData.info,
+  galleryData
 );
 
 const App = () => {
 
-  let isLoggedIn = true; // TODO: Sacarlo del estado o sacarlo de redux;
+  let isLoggedIn = false; // TODO: Sacarlo del estado o sacarlo de redux;
 
   const routesToAdd = isLoggedIn ? routes.routesPrivateWebsite : routes.routesPublicWebsite;
 
