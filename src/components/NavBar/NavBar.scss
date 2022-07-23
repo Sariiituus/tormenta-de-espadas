@@ -3,27 +3,47 @@
   src: url(../../../public/assets/fonts/ring-bearer.TTF);
 }
 
-.navBar-navbar {
+.navBar-wrapper {
     display: flex;
-}
+    align-items: center;
 
-.logo{
-    width: 50px;
-}
+    .logo-wrapper{
+        display: flex;
 
-.navBar-menu {
-    display: flex;
-    flex-grow: 1;
-    list-style-type: none;
-    justify-content: flex-end;
-}
+        .logo {
+            max-width: 20%;
+            margin: 10px 0px 10px;
+            justify-content: flex-start;
 
-.navBar-menu-item {
-    & a, a:hover, a:focus, a:active {
-        font-family: ring-bearer;
-        text-decoration: none;
-        color: black;
-        margin-right: 2em;
+        }
     }
-} 
+    
+    .navBar-menu {
+        display: flex;
+        justify-content: flex-end;
+        flex-grow: 1;
+        list-style-type: none;
+
+        .navBar-menu-item {
+            & a, a:hover, a:focus, a:active {
+                font-family: ring-bearer;
+                font-size: 1.2em;
+                text-decoration: none;
+                color: black;
+                margin-right: 2em;
+            }
+        } 
+        
+
+    }
+
+
+
+
+}
+
+
+
+
+
 
