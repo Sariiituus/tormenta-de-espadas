@@ -1,6 +1,7 @@
 import Home from "../components/Home/Home";
 import Info from "../components/Info/Info";
 import Gallery from "../components/Gallery/Gallery";
+import Login from "../components/login/Login";
 
 export function getRoutes(datosHome, datosInfo, galleryData) {
   return {
@@ -28,7 +29,7 @@ export function getRoutes(datosHome, datosInfo, galleryData) {
       {
         name: "Login",
         path: "/login",
-        element: <Home datos={datosHome} />
+        element: <Login datos={datosHome} />
       }
     ],
     routesPrivateWebsite: [
