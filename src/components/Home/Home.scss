@@ -1,0 +1,21 @@
+@font-face {
+    font-family: ring-bearer;
+    src: url(../../../public/assets/fonts/ring-bearer.TTF);
+}
+
+@font-face {
+    font-family: papyrus;
+    src: url(../../../public/assets/fonts/papyrus.TTF);
+}
+
+.titulo {
+
+    font-family: ring-bearer;
+    font-size: 1.5em;
+    color: rgb(130, 0, 0);
+}
+
+.parrafoUno {
+    font-family: papyrus;
+    color: red;
+}

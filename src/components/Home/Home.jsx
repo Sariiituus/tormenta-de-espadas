@@ -1,13 +1,15 @@
 import React from 'react'
+import './Home.scss'
 
 const Home = (props) => {
   const { datos } = props;
   return (
+    
     <div>
-      <h1>{ datos.titulo }</h1>
-      <p>{ datos.parrafoUno }</p>
-      <p>{ datos.parrafoDos }</p>
+      <h1 className='titulo'>{ datos.titulo }</h1>
+      <p className='parrafoUno'>{ datos.parrafoUno }</p>
     </div>
+
   )
 }
 
