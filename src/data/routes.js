@@ -2,6 +2,7 @@ import Home from "../components/Home/Home";
 import Info from "../components/Info/Info";
 import Gallery from "../components/Gallery/Gallery";
 import Login from "../components/login/Login";
+import Form from "../components/register-form/Form";
 
 export function getRoutes(datosHome, datosInfo, galleryData) {
   return {
@@ -24,7 +25,7 @@ export function getRoutes(datosHome, datosInfo, galleryData) {
       {
         name: "Formulario",
         path: "/form",
-        element: <Home datos={datosHome} />
+        element: <Form/>
       },
       {
         name: "Login",

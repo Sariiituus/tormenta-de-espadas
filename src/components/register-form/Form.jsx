@@ -46,15 +46,19 @@ const Form = () => {
                 </div>
                 <div>
                 <label>Contraseña</label>
-                <input type="password" {...register('password', {
+                <input type="text" {...register('password', {
                     required: true,
-                    // pattern: /^[A-Za-z]+$/i
+                    pattern: /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[$@$!%*?&#.$($)$-$_])[A-Za-z\d$@$!%*?&#.$($)$-$_]{8,15}$/i
                 })}/>
-                {errors.email?.type === 'required' && <p>La contraseña es un campo obligatorio</p>}
+                {errors.password?.type === 'required' && <p>La contraseña es un campo obligatorio</p>}
+                {errors.password?.type === 'required' && <p>La contraseña debe tener un mínima de 8 caracteres y máxima de 15</p>}
                 </div>
                 <div>
                 <label>Repetir Contraseña</label>
-                <input type="password" {...register('repassword')}/>
+                <input type="text" {...register('repassword', {
+                    required: true,
+                    pattern: /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[$@$!%*?&#.$($)$-$_])[A-Za-z\d$@$!%*?&#.$($)$-$_]{8,15}$/i
+                })}/>
                 </div>
                 <div>
                 <label>Elige tu casa</label>
