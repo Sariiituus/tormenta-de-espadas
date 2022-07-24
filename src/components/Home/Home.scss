@@ -10,7 +10,7 @@
 
 .text-wrapper {
 
-    margin-top: 3em;
+    margin-top: 2em;
     //display: flex;
     //flex-direction: column;
     //justify-content: center;
@@ -27,7 +27,7 @@
     .parrafoUno { //funciona
         
         font-family: papyrus;
-        font-size: 1.5em;
+        font-size: 1.3em;
         color: rgb(0, 0, 0);
         margin-right: 8em;
         margin-left: 8em;
@@ -50,7 +50,7 @@
         font-weight: 600;
         justify-content: center;
         line-height: 1.25;
-        margin: 0;
+        margin-bottom: 40px;
         min-height: 3rem;
         padding: calc(.95rem - 1px) calc(1.8rem - 1px);
         position: relative;
