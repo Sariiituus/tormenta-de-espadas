@@ -9,20 +9,31 @@
 }
 
 .text-wrapper {
-    display: none;
-    align-items: center;
 
-}
+    outline: 2px solid red;
+    margin-top: 3em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
 
-.titulo { //funcionaa
+
+    .titulo { //funciona
     
-    //margin-bottom: 50px;
-    font-family: ring-bearer;
-    font-size: 1.5em;
-    color: rgb(119, 0, 0);
+        font-family: ring-bearer;
+        font-size: 2.5em;
+        color: rgb(0, 0, 0);
+    }
+    
+    .parrafoUno { //funciona
+        
+        font-family: papyrus;
+        font-size: 1.5em;
+        color: rgb(0, 0, 0);
+        margin-right: 8em;
+        margin-left: 8em;
+    
+    }
+
 }
 
-.parrafoUno { //funciona
-    font-family: papyrus;
-    color: rgb(0, 0, 0);
-}

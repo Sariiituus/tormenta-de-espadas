@@ -6,8 +6,13 @@ const Home = (props) => {
   return (
     
     <div className='text-wrapper'>
+      
       <h1 className='titulo'>{ datos.titulo }</h1>
-      <p className='parrafoUno'>{ datos.parrafoUno }</p>
+      
+      <div className='info-wrapper'>
+        <p className='parrafoUno'>{ datos.parrafoUno }</p>
+      </div>
+      
     </div>
 
   )
