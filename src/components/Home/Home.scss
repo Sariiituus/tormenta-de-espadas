@@ -8,14 +8,21 @@
     src: url(../../../public/assets/fonts/papyrus.TTF);
 }
 
-.titulo {
+.text-wrapper {
+    display: none;
+    align-items: center;
 
-    font-family: ring-bearer;
-    font-size: 1.5em;
-    color: rgb(130, 0, 0);
 }
 
-.parrafoUno {
+.titulo { //funcionaa
+    
+    //margin-bottom: 50px;
+    font-family: ring-bearer;
+    font-size: 1.5em;
+    color: rgb(119, 0, 0);
+}
+
+.parrafoUno { //funciona
     font-family: papyrus;
-    color: red;
+    color: rgb(0, 0, 0);
 }

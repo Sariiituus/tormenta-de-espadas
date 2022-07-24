@@ -5,7 +5,7 @@ const Home = (props) => {
   const { datos } = props;
   return (
     
-    <div>
+    <div className='text-wrapper'>
       <h1 className='titulo'>{ datos.titulo }</h1>
       <p className='parrafoUno'>{ datos.parrafoUno }</p>
     </div>
