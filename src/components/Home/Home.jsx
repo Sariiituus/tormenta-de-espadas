@@ -1,13 +1,27 @@
 import React from 'react'
+import './Home.scss'
 
 const Home = (props) => {
   const { datos } = props;
   return (
-    <div>
-      <h1>{ datos.titulo }</h1>
-      <p>{ datos.parrafoUno }</p>
-      <p>{ datos.parrafoDos }</p>
+    
+    <div className='text-wrapper'>
+      
+      <h1 className='titulo'>{ datos.titulo }</h1>
+
+      <img src='./assets/icons/logo-white-bg.svg' alt="" />
+      
+      <div className='info-wrapper'>
+        <p className='parrafoUno'>{ datos.parrafoUno }</p>
+      </div>
+
+      <button class="button-6" role="button">¡Comienza tu aventura!</button>
+
+      
     </div>
+    
+    
+
   )
 }
 

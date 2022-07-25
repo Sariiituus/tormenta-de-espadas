@@ -9,9 +9,10 @@ const NavBar = (props) => {
   const routesToRender = isLoggedIn ? routes.routesPrivateWebsite : routes.routesPublicWebsite;
 
   return (
-    <nav className='navBar-navbar'>     
-      <div>
-        <img src='./assets/icons/logo-white-bg.svg' className="logo" alt=""/>
+    <nav className='navBar-wrapper'>     
+      
+      <div className="logo-wrapper">
+        <img src='./assets/icons/small-logo-white-bg.svg' className="logo" alt=""/>
       </div>
       
       <ul className='navBar-menu'>
