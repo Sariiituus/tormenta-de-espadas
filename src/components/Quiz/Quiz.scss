@@ -1,0 +1,125 @@
+//Estilos del componente//
+
+.App {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+//Contenedor de juego//
+.game-box {
+  box-sizing: border-box;
+  border: 1px saddlebrown solid;
+  border-radius: 50px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  margin-top: 200px;
+  padding: 20px;
+  gap: 8rem;
+  width: 70%;
+}
+
+//Contenedor de la pregunta//
+.question-box {
+  font-family: "Charm", cursive;
+  font-weight: 700;
+  font-size: 25px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  width: 60%;
+}
+
+
+//Contenedor con respuestas//
+.choice-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  width: 30%;
+}
+
+//Botón de respuesta//
+.answer-btn {
+  font-family: "Charm", cursive;
+  font-size: 25px;
+  width: 100%;
+}
+
+.answer-btn:hover {
+  background-color: rgb(200, 200, 200);
+  transition: 0.4s;
+}
+
+///Estilos en línea NO TOCAR...///
+.correct,
+.correct:hover {
+  background-color: #2f922f;
+}
+
+.wrong,
+.wrong:hover {
+  background-color: #ff3333;
+}
+
+
+///...HASTA AQUÍ///
+
+//Caja de juego terminado//
+.game-over {
+  box-sizing: border-box;
+  border: 1px saddlebrown solid;
+  border-radius: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 200px;
+  padding: 20px;
+  width: 70%;
+  font-size: 25px;
+  font-family: "Charm", cursive;
+}
+
+//Mensaje de puntuación//
+.results {
+  font-weight: 700;
+
+}
+
+//Colores de los mensajes de puntuación//
+.results-d {
+  color:#ff3333;
+}
+.results-c {
+  color: orange;
+}
+.results-b {
+  color: rgb(204, 255, 0);
+}
+.results-a {
+  color:#2f922f;
+}
+
+
+.btn-box {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+//Botones de resultados//
+.results-btn {
+  padding: 5px;
+  font-family: "Charm", cursive;
+  font-size: 25px;
+
+}
