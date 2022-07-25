@@ -28,10 +28,10 @@
     }
 }
 
-.gallery-btns {
+.gallery-nav {
 
-    .gallery-btns_prev,
-    .gallery-nav_next {
+    .gallery-nav-next,
+    .gallery-nav-prev {
 
         align-items: center;
         border: 1px solid rgba(0, 0, 0, 0.1);
@@ -47,7 +47,7 @@
         font-weight: 600;
         justify-content: center;
         line-height: 1.25;
-        margin: 0px 10px 20px 10px;
+        margin: 40px 10px 20px 0px;
         min-height: 3rem;
         padding: calc(.95rem - 1px) calc(1.8rem - 1px);
         position: relative;
@@ -60,24 +60,27 @@
         width: auto;
     }
 
-    .gallery-btns_prev:hover,
-    .gallery-nav_next:hover,
-    .gallery-btns_prev:focus,
-    .gallery-nav_next:focus, {
+    .gallery-nav-next:hover,
+    .gallery-nav-prev:hover,
+    .gallery-nav-next:focus,
+    .gallery-nav-prev:focus {
         border-color: rgba(0, 0, 0, 0.15);
         box-shadow: rgba(0, 0, 0, 0.1) 0 4px 12px;
         background-color: #EDD396;
         color: #242246;
+
         
     }
 
-    .gallery-btns_prev:hover,
-    .gallery-nav_next:hover {
+    .gallery-nav-next:hover,
+    .gallery-nav-prev:hover,
+    .gallery-nav-next:focus,
+    .gallery-nav-prev:focus {
         transform: translateY(-1px);
     }
 
-    .gallery-btns_prev:active,
-    .gallery-nav_next:active {
+    .gallery-nav-next:active,
+    .gallery-nav-prev:active {
     background-color: #242246;
     border-color: rgba(0, 0, 0, 0.15);
     box-shadow: rgba(0, 0, 0, 0.06) 0 2px 4px;
@@ -85,8 +88,17 @@
     transform: translateY(0);
     }
 
-}
+    .gallery-nav-prev::before {
+        content: url('../../../public/assets/icons/arrow-prev.svg');
+        margin: 7px 10px 0px 0px;
+    }
 
+    .gallery-nav-next::after {
+        content: url('../../../public/assets/icons/arrow-next.svg');
+        margin: 7px 0px 0px 10px;
+    }
+
+}
 
 
 .gallery {
@@ -106,8 +118,12 @@ justify-content: center;
 }
 
 .gallery-img {
-    max-width: 640px;
-    max-height: 375px;
+    max-width: 800px;
+    max-height: 400px;
+
+    &::before{
+        content: url('../../../public/assets/icons/top-left-decoration.svg')
+    }
 }
 
 .slide {

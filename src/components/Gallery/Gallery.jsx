@@ -28,16 +28,6 @@ const Gallery = ({ galleryData }) => {
         <h2 className="gallery-header_subtitle">Ediciones anteriores</h2>
       </div>
 
-      <div className="gallery-btns">
-        <button className="gallery-btns_prev" onClick={prevImage}>
-          Anterior
-        </button>
-        
-        <button className="gallery-nav_next" onClick={nextImage}>
-          Siguiente
-        </button>
-      </div>
-
       {galleryData.map((choice, index) => {
         return (
           <div
@@ -54,6 +44,16 @@ const Gallery = ({ galleryData }) => {
           </div>
         );
       })}
+
+      <div className="gallery-nav">
+        <button className="gallery-nav-prev" onClick={prevImage}>
+          Anterior
+        </button>
+        
+        <button className="gallery-nav-next" onClick={nextImage}>
+          Siguiente
+        </button>
+      </div>
 
     </div>
   );
