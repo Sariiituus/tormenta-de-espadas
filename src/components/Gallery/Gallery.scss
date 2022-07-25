@@ -12,6 +12,8 @@
 .gallery-header-wrapper{
 
     text-align: center;
+    margin-top: 20px;
+    margin-bottom: 40px;
 
     .gallery-header_title {
 
@@ -26,6 +28,17 @@
         font-size: 1.5em;
         color: rgb(0, 0, 0);
     }
+}
+
+.gallery-wrapper {
+    position: relative;
+    
+    .decorations {
+        position: absolute;
+        top: -40px;
+        left: -35px;
+    }
+
 }
 
 .gallery-nav {
@@ -118,12 +131,9 @@ justify-content: center;
 }
 
 .gallery-img {
-    max-width: 800px;
-    max-height: 400px;
+    max-width: 1000px;
+    max-height: 800px;
 
-    &::before{
-        content: url('../../../public/assets/icons/top-left-decoration.svg')
-    }
 }
 
 .slide {

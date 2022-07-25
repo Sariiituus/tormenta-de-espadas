@@ -28,22 +28,29 @@ const Gallery = ({ galleryData }) => {
         <h2 className="gallery-header_subtitle">Ediciones anteriores</h2>
       </div>
 
-      {galleryData.map((choice, index) => {
-        return (
-          <div
-            className={index === currentImage ? "slide active" : "slide"}
-            key={index}
-          >
-            {index === currentImage && (
-              <img
-                src={choice.image}
-                alt="imagen edicion anterior"
-                className="gallery-img"
-              />
-            )}
-          </div>
-        );
-      })}
+      <div className="gallery-wrapper">
+      
+      <img className='decorations' src='./assets/icons/center-decoration.svg' alt="" />
+
+        {galleryData.map((choice, index) => {
+          return (
+            <div
+              className={index === currentImage ? "slide active" : "slide"}
+              key={index}
+            >
+              {index === currentImage && (
+                <img
+                  src={choice.image}
+                  alt="imagen edicion anterior"
+                  className="gallery-img"
+                />
+              )}
+            </div>
+          );
+        })}
+
+      </div>
+
 
       <div className="gallery-nav">
         <button className="gallery-nav-prev" onClick={prevImage}>
