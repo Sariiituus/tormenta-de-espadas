@@ -3,3 +3,139 @@
 * {
   font-family: "Oswald", sans-serif;
 }
+
+@import url("https://fonts.googleapis.com/css?family=Oswald:500");
+
+* {
+  font-family: "Oswald", sans-serif;
+}
+
+.button {
+  color: #ffffff;
+  background-color: #24303c;
+  padding: 12px 25px;
+  font-size: 12px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  border: 0;
+  border-radius: 2px;
+  outline: 0;
+  box-shadow: 3px 3px 20px rgba(0, 0, 0, 0.2);
+  transition: all 0.2s;
+}
+
+.button:hover,
+.button:active,
+.button:focus {
+  transform: scale(1.1);
+}
+
+.button--transparent {
+  background: transparent;
+  border: 0;
+  outline: 0;
+}
+
+input {
+  width: calc(100% - 10px);
+  min-height: 30px;
+  padding-left: 5px;
+  padding-right: 5px;
+  letter-spacing: 0.5px;
+  border: 0;
+  border-bottom: 2px solid #f0f0f0;
+}
+
+input:valid {
+  border-color: #000000;
+}
+
+input:focus {
+  outline: none;
+  border-color: #24303c;
+}
+
+.form-list__row {
+  margin-bottom: 25px;
+}
+
+.form-list__row label {
+  position: relative;
+  display: block;
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 11px;
+  letter-spacing: 0.5px;
+  color: #939393;
+}
+
+// .form-list__input-inline > * {
+//   width: calc(50% - 10px - 10px);
+// }
+
+.form-list__row--agree {
+  margin-top: 30px;
+  margin-bottom: 30px;
+  font-size: 12px;
+}
+
+.form-list__row--agree input {
+  width: auto;
+  margin-right: 5px;
+}
+
+.modal {
+  display: -ms-flexbox;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+  overflow-y: auto;
+}
+
+.modal__content h2 {
+  margin-bottom: 15px;
+}
+
+.modal__container {
+  display: flex;
+  max-width: 675px;
+  min-height: 400px;
+  margin-bottom: 35px;
+  background-color: #ffffff;
+  border-radius: 5px;
+  box-shadow: 3px 3px 20px rgba(0, 0, 0, 0.1);
+}
+
+.modal__featured {
+  position: relative;
+  -ms-flex: 1;
+  flex: 1;
+  min-width: 230px;
+  /* padding: 20px; */
+  overflow: hidden;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+
+.modal__circle {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 200%;
+  width: 200%;
+  background-image: url("https://elcomercio.pe/resizer/929KWqaAUEt0Ep2QCjgEzmSCwcA=/1200x800/smart/filters:format(jpeg):quality(75)/cloudfront-us-east-1.images.arcpublishing.com/elcomercio/AQ4QCG2IIRGI3I6PWUXPWUXLPI.jpg");
+  // background-size: 455px;
+  // background-repeat: no-repeat;
+  background-position: 35px 285px;
+  border-radius: 50%;
+  -ms-transform: translateX(-50%) translateY(-25%);
+  transform: translateX(-50%) translateY(-25%);
+}
+
+.modal__content {
+  -ms-flex: 3;
+  flex: 3;
+  padding: 40px 30px;
+}
