@@ -1,0 +1,89 @@
+@font-face {
+    font-family: ring-bearer;
+    src: url(../../../public/assets/fonts/ring-bearer.TTF);
+}
+
+@font-face {
+    font-family: papyrus;
+    src: url(../../../public/assets/fonts/papyrus.TTF);
+}
+
+.text-wrapper {
+
+    margin-top: 2em;
+    //display: flex;
+    //flex-direction: column;
+    //justify-content: center;
+    text-align: center;
+
+
+    .titulo { //funciona
+    
+        font-family: ring-bearer;
+        font-size: 2.5em;
+        color: rgb(0, 0, 0);
+    }
+    
+    .parrafoUno { //funciona
+        
+        font-family: papyrus;
+        font-size: 1.3em;
+        color: rgb(0, 0, 0);
+        margin-right: 8em;
+        margin-left: 8em;
+    
+    }
+
+    .button-6 {
+
+        align-items: center;
+        border: 1px solid rgba(0, 0, 0, 0.1);
+        border-radius: .25rem;
+        box-shadow: rgba(0, 0, 0, 0.02) 0 1px 3px 0;
+        box-sizing: border-box;
+        background-color: #242246;
+        color: white;
+        cursor: pointer;
+        display: inline-flex;
+        font-family: papyrus;
+        font-size: 16px;
+        font-weight: 600;
+        justify-content: center;
+        line-height: 1.25;
+        margin-bottom: 40px;
+        min-height: 3rem;
+        padding: calc(.95rem - 1px) calc(1.8rem - 1px);
+        position: relative;
+        text-decoration: none;
+        transition: all 250ms;
+        user-select: none;
+        -webkit-user-select: none;
+        touch-action: manipulation;
+        vertical-align: baseline;
+        width: auto;
+    }
+
+    .button-6:hover,
+    .button-6:focus {
+        border-color: rgba(0, 0, 0, 0.15);
+        box-shadow: rgba(0, 0, 0, 0.1) 0 4px 12px;
+        background-color: #EDD396;
+        color: #242246;
+        
+    }
+
+    .button-6:hover {
+        transform: translateY(-1px);
+    }
+
+    .button-6:active {
+    background-color: #242246;
+    border-color: rgba(0, 0, 0, 0.15);
+    box-shadow: rgba(0, 0, 0, 0.06) 0 2px 4px;
+    color: white;
+    transform: translateY(0);
+    }
+
+}
+
+
