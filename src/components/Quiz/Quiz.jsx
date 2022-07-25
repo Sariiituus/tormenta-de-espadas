@@ -5,7 +5,7 @@ import { useState } from "react";
 
 
 
-const App = () => {
+const Quiz = ({questions}) => {
   const [actualQuestion, setActualQuestion] = useState(0);
   const [score, setScore] = useState(0);
   const [isFinished, setIsFinished] = useState(false);
@@ -57,7 +57,7 @@ const results = () => {
   )
 
   return (
-    <div className="App">
+    <div className="quiz">
     <div className="game-box">
       <div className="question-box">
         <div className="question-number">
@@ -77,4 +77,4 @@ const results = () => {
   );
 }
 
-export default App;
+export default Quiz;

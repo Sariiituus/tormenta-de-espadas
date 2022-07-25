@@ -1,6 +1,8 @@
 import Home from "../components/Home/Home";
 import Info from "../components/Info/Info";
 import Gallery from "../components/Gallery/Gallery";
+import Quiz from "../components/Quiz/Quiz";
+import questions from "../components/Quiz/QuizQuestions";
 
 export function getRoutes(datosHome, datosInfo, galleryData) {
   return {
@@ -19,6 +21,11 @@ export function getRoutes(datosHome, datosInfo, galleryData) {
         name: "Galería",
         path: "/gallery",
         element: <Gallery galleryData={galleryData} />
+      },
+      {
+        name: "Quiz",
+        path: "/quiz",
+        element: <Quiz questions={questions} />
       },
       {
         name: "Formulario",
