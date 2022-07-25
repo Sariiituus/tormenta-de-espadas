@@ -10,6 +10,8 @@ const Quiz = ({questions}) => {
   const [score, setScore] = useState(0);
   const [isFinished, setIsFinished] = useState(false);
 
+  
+
   const handleAnswerSubmit = (isCorrect, ev) => {
     if (isCorrect) setScore(score +1);
     ev.target.classList.add(isCorrect ? "correct" : "wrong");
@@ -23,6 +25,8 @@ const Quiz = ({questions}) => {
     }, 800);
   }
   
+  
+
 const results = () => {
   if (score <= 2 ) 
     return (
@@ -42,19 +46,21 @@ const results = () => {
   )
 }
 
-  if (isFinished) return (
-    <div className="App">
+  if (isFinished) {
+  
+  return (
+    <div className="quiz">
       <div className="game-over">
         <span>Has acertado {score} de {questions.length} preguntas</span>
         <div className="results">{results()}</div>
         <br />
         <div className="btn-box">
-        <button className="results-btn" onClick={() => window.location.href="/"}>Reiniciar</button>
-        <button className="results-btn">Cerrar</button>
+        <button className="results-btn" onClick={() => window.location.href="/quiz"}>Reiniciar</button>
+        <button className="results-btn" onClick={() => window.location.href="/character-profile"}>Cerrar</button>
         </div>
       </div>
     </div>
-  )
+  )}
 
   return (
     <div className="quiz">

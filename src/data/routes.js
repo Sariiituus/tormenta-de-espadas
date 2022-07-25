@@ -3,6 +3,7 @@ import Info from "../components/Info/Info";
 import Gallery from "../components/Gallery/Gallery";
 import Quiz from "../components/Quiz/Quiz";
 import questions from "../components/Quiz/QuizQuestions";
+import CharacterProfile from "../components/CharacterProfile/CharacterProfile";
 
 export function getRoutes(datosHome, datosInfo, galleryData) {
   return {
@@ -55,14 +56,14 @@ export function getRoutes(datosHome, datosInfo, galleryData) {
         element: <Gallery galleryData={galleryData} />
       },
       {
-        name: "Edita tu personaje",
-        path: "/edit",
-        element: <Home datos={datosHome} />
+        name: "Página de personaje",
+        path: "/character-profile",
+        element: <CharacterProfile characterProfile={CharacterProfile} />
       },
       {
         name: "Quiz",
         path: "/quiz",
-        element: <Home datos={datosHome} />
+        element: <Quiz questions={questions} />
       },
       {
         name: "Logout",
