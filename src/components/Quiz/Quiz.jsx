@@ -56,7 +56,6 @@ const results = () => {
         <div className="results">{results()}</div>
         <br />
         <div className="btn-box">
-        <button className="results-btn" onClick={() => navigate('/quiz')}>Reiniciar</button>
         <button className="results-btn" onClick={() => navigate('/character-profile')}>Cerrar</button>
         </div>
       </div>
