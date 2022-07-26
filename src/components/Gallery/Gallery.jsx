@@ -2,6 +2,7 @@ import React from "react";
 import "./Gallery.scss";
 import { useState } from "react";
 
+
 const Gallery = ({ galleryData }) => {
   const [currentImage, setCurrentImage] = useState(0);
   const length = galleryData.length;
