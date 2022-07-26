@@ -10,7 +10,10 @@ const CharacterProfile = () => {
     handleSubmit,
   } = useForm();
 
+
   let navigate = useNavigate();
+
+
 
   const onSubmit = (data) => {
     console.log(data);
@@ -115,7 +118,9 @@ const CharacterProfile = () => {
           inteligente que ellos? ¡Descubre con este quiz si estás preparado para
           el Concilio de Maestres!
         </h3>
+
         <button className="quiz-me_btn" onClick={() => navigate("/quiz")}>
+
           Empezar Quiz
         </button>
       </div>
