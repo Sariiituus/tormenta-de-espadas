@@ -23,7 +23,7 @@ const CharacterProfile = () => {
         onSubmit={handleSubmit(onSubmit)}
       >
         <div className="character-profile_name">
-          <label>Nombre del personaje</label>
+          <label>Nombre</label>
           <input
             type="text"
             name=""
@@ -52,7 +52,17 @@ const CharacterProfile = () => {
         >
           <option value="female">Mujer</option>
           <option value="male">Hombre</option>
-          <option value="other">Otro</option>
+        </select>
+        <select
+          defaultValue="Elige tu clase"
+          className="character-profile_class"
+          {...register("class", {
+            required: true,
+          })}
+        >
+          <option value="fighter">Combatiente</option>
+          <option value="negociator">Negociador</option>
+          <option value="sage">Sabio</option>
         </select>
         <div className="character-profile_story">
           <label>Historia del personaje</label>
