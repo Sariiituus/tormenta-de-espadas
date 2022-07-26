@@ -9,15 +9,14 @@ const Info = (props) => {
     <div className='info-container'>
       <div className='info-titulo-subtitulo-container'>
         <div className='info-titulo'>{ datos.titulo }</div>
-        <div className='info-subtitulo'>{ datos.subtitulo }</div>
       </div>
 
       <div className='info-contenido-container'>
         <div className='info-descripcion-container'>
-          <p>bla bla bla bla</p>
-          <p>ble ble ble</p>
-          <p>blo blo bl</p>
-          <p>blu blu blu</p>
+          <p>{ datos.parrafoUno }</p>
+          <p>{ datos.parrafoDos }</p>
+          <p>{ datos.parrafoTres }</p>
+          <p>{ datos.parrafoCuatro }</p>
         </div>
 
         <div className='info-mapa-container'>
@@ -37,11 +36,13 @@ const Info = (props) => {
 
       <div className='info-calendario-container'>
         <div>
-            <h4>Calendario</h4>
+            <h4>Calendario de actividades</h4>
         </div>
         
-        <div>
-            <button>Descargar</button>
+        <div className="container-btn">
+        <a className="calendario" download href='/assets/Actividades-TDE.pdf' role="button">
+          Descargar
+          </a>
         </div>
       </div>
     </div>
