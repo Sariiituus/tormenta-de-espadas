@@ -1,6 +1,7 @@
 import React from "react";
 import { useForm } from "react-hook-form";
 import "./CharacterProfile.scss";
+import { useNavigate } from "react-router-dom";
 
 const CharacterProfile = () => {
   const {
@@ -8,6 +9,8 @@ const CharacterProfile = () => {
     formState: { errors },
     handleSubmit,
   } = useForm();
+
+  let navigate = useNavigate();
 
   const onSubmit = (data) => {
     console.log(data);
@@ -40,13 +43,13 @@ const CharacterProfile = () => {
             <span>El nombre debe tener más de 2 caracteres</span>
           )}
         </div>
-        <select defaultValue="Elige tu género"
+        <select
+          defaultValue="Elige tu género"
           className="character-profile_gender"
           {...register("gender", {
             required: true,
           })}
         >
-          
           <option value="female">Mujer</option>
           <option value="male">Hombre</option>
           <option value="other">Otro</option>
@@ -57,7 +60,7 @@ const CharacterProfile = () => {
             type="text"
             {...register("story", {
               required: true,
-              minLength:200,
+              minLength: 200,
               maxLength: 1000,
             })}
             className="character-profile_story-box"
@@ -68,7 +71,6 @@ const CharacterProfile = () => {
           {errors.story?.type === "minLength" && (
             <span>La historia debe tener como mínimo 200 caracteres</span>
           )}
-          
         </div>
         <div className="character-image">
           <img src="" alt="" />
@@ -83,10 +85,7 @@ const CharacterProfile = () => {
           inteligente que ellos? ¡Descubre con este quiz si estás preparado para
           el Concilio de Maestres!
         </h3>
-        <button
-          className="quiz-me_btn"
-          onClick={() => (window.location.href = "/quiz")}
-        >
+        <button className="quiz-me_btn" onClick={() => navigate("/quiz")}>
           Empezar Quiz
         </button>
       </div>
