@@ -1,6 +1,7 @@
 import React from "react";
 import { useForm } from "react-hook-form";
 import "./CharacterProfile.scss";
+import { useNavigate } from "react-router-dom";
 
 const CharacterProfile = () => {
   const {
@@ -8,6 +9,8 @@ const CharacterProfile = () => {
     formState: { errors },
     handleSubmit,
   } = useForm();
+
+let navigate = useNavigate();
 
   const onSubmit = (data) => {
     console.log(data);
@@ -85,7 +88,7 @@ const CharacterProfile = () => {
         </h3>
         <button
           className="quiz-me_btn"
-          onClick={() => (window.location.href = "/quiz")}
+          onClick={() => navigate('/quiz')}
         >
           Empezar Quiz
         </button>
