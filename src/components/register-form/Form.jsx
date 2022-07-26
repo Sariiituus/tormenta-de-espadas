@@ -1,6 +1,7 @@
 import React from "react";
 import { useForm } from "react-hook-form";
 import "./Form.scss";
+import { API } from "../../shared/Api/Api";
 
 const Form = () => {
   const {
@@ -11,7 +12,9 @@ const Form = () => {
   } = useForm();
 
   const onSubmit = (data) => {
-    console.log(data);
+    API.post("users", data).then((res) => {
+      console.log(res);
+    })
   };
 
   const addPhone = watch("addPhone");
@@ -68,7 +71,7 @@ const Form = () => {
                 <div className="form-list__row form-list__row--inline">
                   <label>Contraseña</label>
                   <input
-                    type="text"
+                    type="password"
                     {...register("password", {
                       required: true,
                       pattern:
@@ -96,7 +99,7 @@ const Form = () => {
                 </div>
                 <div className="form-list__row form-list__row--agree">
                   <label>¿Deseas incluir número telefonico?</label>
-                  <input type="checkbox" {...register("addPhone")} />
+                  <input type="checkbox"/>
                 </div>
                 {addPhone && (
                   <div className="form-list__row form-list__row--inline">

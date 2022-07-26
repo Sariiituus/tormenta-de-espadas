@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { API } from "../../shared/Api/Api";
 import "./Login.scss"
 
 const Login = () => {
@@ -16,7 +17,10 @@ const Login = () => {
 
   const onSubmit = (ev) => {
     ev.preventDefault();
-    localStorage.setItem("token", true);
+    API.post("users/login", form).then((res)=> {
+      console.log(res)
+      localStorage.setItem("token", res.data.token);
+    })
   };
 
   return (
