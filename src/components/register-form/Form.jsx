@@ -31,7 +31,7 @@ const Form = () => {
                   <label>Nombre</label>
                   <input
                     type="text"
-                    {...register("name", {
+                    {...register("userName", {
                       required: true,
                       minLength: 4,
                       maxLength: 16,
@@ -78,20 +78,6 @@ const Form = () => {
                   {errors.password?.type === "required" && ( alert ("La contraseña es un campo obligatorio"))}
                   {errors.password?.type === "required" && ( alert ("La contraseña debe tener una longitud mínima de 8 caracteres y máxima de 15, una letra mayúscula, una miniscula, un número y al menos un carácter especial ($@$!%*?&#.)")
                   )}
-                </div>
-                <div className="form-list__row form-list__row--inline">
-                  <label>Confirmar Contraseña</label>
-                  <input
-                    type="text"
-                    {...register("re-password", {
-                      required: true,
-                      pattern:
-                        /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[$@$!%*?&#.$($)$-$_])[A-Za-z\d$@$!%*?&#.$($)$-$_]{8,15}$/i,
-                    })}
-                  />
-                  {errors.password?.type === "required" && ( alert ("Confirmar contraseña es un campo obligatorio"))}
-                  {errors.password?.type === "required" && ( alert ("Confirmar contraseña debe tener una longitud mínima de 8 caracteres y máxima de 15, una letra mayúscula, una miniscula, un número y al menos un carácter especial ($@$!%*?&#.)"))}
-                  {errors.password?.type === "required" && (alert ("Confirmar contraseña debe coincidir con el campo contraseña"))}
                 </div>
                 <div className="form-list__row form-list__row--inline">
                   <label>Elige tu casa</label>
