@@ -7,7 +7,6 @@ const Form = () => {
   const {
     register,
     formState: { errors },
-    watch,
     handleSubmit,
   } = useForm();
 
@@ -16,8 +15,6 @@ const Form = () => {
       console.log(res);
     })
   };
-
-  const addPhone = watch("addPhone");
 
   return (
     <>
@@ -97,16 +94,10 @@ const Form = () => {
                   </select>
                   {errors.house?.type === "required" && ( alert ("Debes elegir una casa"))}
                 </div>
-                <div className="form-list__row form-list__row--agree">
-                  <label>¿Deseas incluir número telefonico?</label>
-                  <input type="checkbox"/>
-                </div>
-                {addPhone && (
-                  <div className="form-list__row form-list__row--inline">
+                <div className="form-list__row form-list__row--inline">
                     <label>Número telefonico</label>
                     <input type="text" {...register("phone")} />
-                  </div>
-                )}
+                </div>
               </div>
               <input type="submit" value="Registarse" className="button"/>
             </form>
