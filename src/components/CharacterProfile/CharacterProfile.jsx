@@ -43,27 +43,45 @@ const CharacterProfile = () => {
             <span>El nombre debe tener más de 2 caracteres</span>
           )}
         </div>
-        <select
-          defaultValue="Elige tu género"
-          className="character-profile_gender"
-          {...register("gender", {
-            required: true,
-          })}
-        >
-          <option value="female">Mujer</option>
-          <option value="male">Hombre</option>
-        </select>
-        <select
-          defaultValue="Elige tu clase"
-          className="character-profile_class"
-          {...register("class", {
-            required: true,
-          })}
-        >
-          <option value="fighter">Combatiente</option>
-          <option value="negociator">Negociador</option>
-          <option value="sage">Sabio</option>
-        </select>
+        <div className="character-profile_image">
+          <label>Imagen</label>
+
+          <input type="text" name="image" />
+        </div>
+        <div className="character-profile_gender">
+          <label>Sexo</label>
+          <select
+            {...register("gender", {
+              required: true,
+            })}
+          >
+            <option value="female">Mujer</option>
+            <option value="male">Hombre</option>
+          </select>
+        </div>
+        <div className="character-profile_age">
+          <label>Edad</label>
+          <input
+            type="number"
+            {...register("age", {
+              required: true,
+            })}
+          />
+        </div>
+        <div className="character-profile_class">
+          <label>Clase</label>
+          <select
+            defaultValue="Elige tu clase"
+            className="character-profile_class"
+            {...register("class", {
+              required: true,
+            })}
+          >
+            <option value="fighter">Combatiente</option>
+            <option value="negociator">Negociador</option>
+            <option value="sage">Sabio</option>
+          </select>
+        </div>
         <div className="character-profile_story">
           <label>Historia del personaje</label>
           <textarea
@@ -76,15 +94,13 @@ const CharacterProfile = () => {
             className="character-profile_story-box"
           />
           {errors.story?.type === "maxLength" && (
-            <span>El límite de escritura es de 1000 caracteres</span>
+            <span>El límite de escritura es de 700 caracteres</span>
           )}
           {errors.story?.type === "minLength" && (
             <span>La historia debe tener como mínimo 200 caracteres</span>
           )}
         </div>
-        <div className="character-image">
-          <img src="" alt="" />
-        </div>
+
         <input type="submit" value="Guardar" />
       </form>
       <div className="quiz-me">
