@@ -26,7 +26,7 @@ const Form = () => {
           <div className="modal__content">
             <h2>Comienza tu aventura</h2>
             <form onSubmit={handleSubmit(onSubmit)}>
-              <div class="form-list">
+              <div className="form-list">
                 <div className="form-list__row">
                   <label>Nombre</label>
                   <input
@@ -37,9 +37,9 @@ const Form = () => {
                       maxLength: 16,
                     })}
                   />
-                  {errors.name?.type === "required" && (<p>Nombre es un campo obligatorio</p>)}
-                  {errors.name?.type === "minLength" && (<p>Nombre debe tener un mínimo de 4 y máximo 16 caracteres</p>)}
-                  {errors.name?.type === "maxLength" && (<p>Nombre debe tener un mínimo de 4 y máximo 16 caracteres</p>)}
+                  {errors.name?.type === "required" && ( alert ("Nombre es un campo obligatorio"))}
+                  {errors.name?.type === ("minLength", "maxLength") && ( alert ("Nombre debe tener un mínimo de 4 y máximo 16 caracteres"))}
+                  {/* {errors.name?.type === "maxLength" && ( alert ("Nombre debe tener un mínimo de 4 y máximo 16 caracteres"))} */}
                 </div>
                 <div className="form-list__row">
                   <label>Edad</label>
@@ -50,8 +50,8 @@ const Form = () => {
                       min: 18,
                     })}
                   />
-                  {errors.age?.type === "required" && (<p>Edad es un campo obligatorio</p>)}
-                  {errors.age?.type === "min" && (<p>La edad mínima debe ser 18 años</p>)}
+                  {errors.age?.type === "required" && ( alert ("Edad es un campo obligatorio"))}
+                  {errors.age?.type === "min" && ( alert ("La edad mínima debe ser 18 años"))}
                 </div>
                 <div className="form-list__row">
                   <label>Email</label>
@@ -62,10 +62,8 @@ const Form = () => {
                       //  pattern: ^(?=\w*\d)(?=\w*[A-Z])(?=\w*[a-z])\S{8,16}$
                     })}
                   />
-                  {errors.email?.type === "required" && (
-                    <p>El campo email es obligatorio</p>
-                  )}
-                  {/* {errors.email?.type === 'pattern' && <p>El campo email es erróneo</p>} */}
+                  {errors.email?.type === "required" && ( alert ("El campo email es obligatorio"))}
+                  {/* {errors.email?.type === 'pattern' && <span>El campo email es erróneo</span>} */}
                 </div>
                 <div className="form-list__row form-list__row--inline">
                   <label>Contraseña</label>
@@ -77,8 +75,8 @@ const Form = () => {
                         /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[$@$!%*?&#.$($)$-$_])[A-Za-z\d$@$!%*?&#.$($)$-$_]{8,15}$/i,
                     })}
                   />
-                  {errors.password?.type === "required" && (<p>La contraseña es un campo obligatorio</p>)}
-                  {errors.password?.type === "required" && (<p>La contraseña debe tener una longitud mínima de 8 caracteres y máxima de 15, una letra mayúscula, una miniscula, un número y al menos un carácter especial ($@$!%*?&#.)</p>
+                  {errors.password?.type === "required" && ( alert ("La contraseña es un campo obligatorio"))}
+                  {errors.password?.type === "required" && ( alert ("La contraseña debe tener una longitud mínima de 8 caracteres y máxima de 15, una letra mayúscula, una miniscula, un número y al menos un carácter especial ($@$!%*?&#.)")
                   )}
                 </div>
                 <div className="form-list__row form-list__row--inline">
@@ -91,9 +89,9 @@ const Form = () => {
                         /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[$@$!%*?&#.$($)$-$_])[A-Za-z\d$@$!%*?&#.$($)$-$_]{8,15}$/i,
                     })}
                   />
-                  {errors.password?.type === "required" && (<p>Confirmar copntraseña es un campo obligatorio</p>)}
-                  {errors.password?.type === "required" && (<p>Confirmar copntraseña debe tener una longitud mínima de 8 caracteres y máxima de 15, una letra mayúscula, una miniscula, un número y al menos un carácter especial ($@$!%*?&#.)</p>)}
-                  {errors.password?.type === "required" && (<p>Confirmar copntraseña debe coincidir con el campo contraseña</p>)}
+                  {errors.password?.type === "required" && ( alert ("Confirmar contraseña es un campo obligatorio"))}
+                  {errors.password?.type === "required" && ( alert ("Confirmar contraseña debe tener una longitud mínima de 8 caracteres y máxima de 15, una letra mayúscula, una miniscula, un número y al menos un carácter especial ($@$!%*?&#.)"))}
+                  {errors.password?.type === "required" && (alert ("Confirmar contraseña debe coincidir con el campo contraseña"))}
                 </div>
                 <div className="form-list__row form-list__row--inline">
                   <label>Elige tu casa</label>
@@ -108,9 +106,7 @@ const Form = () => {
                     <option value="Greyjoy">Greyjoy</option>
                     <option value="Martell">Martell</option>
                   </select>
-                  {errors.house?.type === "required" && (
-                    <p>Debes elegir una casa</p>
-                  )}
+                  {errors.house?.type === "required" && ( alert ("Debes elegir una casa"))}
                 </div>
                 <div className="form-list__row form-list__row--agree">
                   <label>¿Deseas incluir número telefonico?</label>

@@ -4,12 +4,6 @@
   font-family: "Oswald", sans-serif;
 }
 
-@import url("https://fonts.googleapis.com/css?family=Oswald:500");
-
-* {
-  font-family: "Oswald", sans-serif;
-}
-
 .button {
   color: #ffffff;
   background-color: #24303c;
@@ -113,7 +107,7 @@ input:focus {
   -ms-flex: 1;
   flex: 1;
   min-width: 230px;
-  /* padding: 20px; */
+  padding: 20px;
   overflow: hidden;
   border-top-left-radius: 5px;
   border-bottom-left-radius: 5px;
@@ -127,7 +121,7 @@ input:focus {
   width: 200%;
   background-image: url("https://elcomercio.pe/resizer/929KWqaAUEt0Ep2QCjgEzmSCwcA=/1200x800/smart/filters:format(jpeg):quality(75)/cloudfront-us-east-1.images.arcpublishing.com/elcomercio/AQ4QCG2IIRGI3I6PWUXPWUXLPI.jpg");
   // background-size: 455px;
-  // background-repeat: no-repeat;
+  background-repeat: no-repeat;
   background-position: 35px 285px;
   border-radius: 50%;
   -ms-transform: translateX(-50%) translateY(-25%);
