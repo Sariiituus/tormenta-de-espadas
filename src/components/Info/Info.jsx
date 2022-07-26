@@ -6,7 +6,7 @@ const Info = (props) => {
   const { datos } = props;
 
   return (
-    
+
     <div className='content-wrapper'>
 
       <div className='title'>
@@ -44,12 +44,10 @@ const Info = (props) => {
             <h4>Calendario de actividades</h4>
         </div>
         
-        <div className="calendar-btn">
-        <a className="calendario" download href='/assets/Actividades-TDE.pdf' role="button">
-          Descargar
-          </a>
-        </div>
-
+        <a className="calendar-btn" download href='/assets/Actividades-TDE.pdf' role="button">
+        <button class="button-6" role="button">Descargar</button>
+        </a>
+        
       </div>
 
     </div>

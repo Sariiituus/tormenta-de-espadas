@@ -35,8 +35,8 @@
     
     .decorations {
         position: absolute;
-        top: -40px;
-        left: -35px;
+        top: -45px;
+        left: -47px;
     }
 
 }
@@ -115,10 +115,10 @@
 
 
 .gallery {
-display: flex;
-flex-direction: column;
-align-items: center;
-justify-content: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 .gallery-nav{
@@ -131,8 +131,8 @@ justify-content: center;
 }
 
 .gallery-img {
-    max-width: 1000px;
-    max-height: 800px;
+    max-width: 800px;
+    max-height: 500px;
 
 }
 
