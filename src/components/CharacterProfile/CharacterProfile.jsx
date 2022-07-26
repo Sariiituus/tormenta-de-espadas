@@ -3,7 +3,11 @@ import { useForm } from "react-hook-form";
 import "./CharacterProfile.scss";
 
 const CharacterProfile = () => {
-  const { register, formState: { errors }, handleSubmit } = useForm();
+  const {
+    register,
+    formState: { errors },
+    handleSubmit,
+  } = useForm();
 
   const onSubmit = (data) => {
     console.log(data);
@@ -17,41 +21,67 @@ const CharacterProfile = () => {
       >
         <div className="character-profile_name">
           <label>Nombre del personaje</label>
-          <input type="text" name="" {...register('character', {
-            required:true,
-            minLength: 3,
-            maxLength: 9
-          })}/>
-          {errors.character?.type === 'required' && <span>Se requiere nombre de personaje</span>}
-          {errors.character?.type === 'maxLength' && <span>El nombre debe tener menos de 10 caracteres</span>}
-          {errors.character?.type === 'minLength' && <span>El nombre debe tener más de 2 caracteres</span>}
+          <input
+            type="text"
+            name=""
+            {...register("character", {
+              required: true,
+              minLength: 3,
+              maxLength: 9,
+            })}
+          />
+          {errors.character?.type === "required" && (
+            <span>Se requiere nombre de personaje</span>
+          )}
+          {errors.character?.type === "maxLength" && (
+            <span>El nombre debe tener menos de 10 caracteres</span>
+          )}
+          {errors.character?.type === "minLength" && (
+            <span>El nombre debe tener más de 2 caracteres</span>
+          )}
         </div>
-        <select className="character-profile_gender" {...register('gender')}>
-          <option selected disabled hidden>
-            Elige tu género
-          </option>
+        <select defaultValue="Elige tu género"
+          className="character-profile_gender"
+          {...register("gender", {
+            required: true,
+          })}
+        >
+          
           <option value="female">Mujer</option>
           <option value="male">Hombre</option>
           <option value="other">Otro</option>
         </select>
         <div className="character-profile_story">
           <label>Historia del personaje</label>
-          <textarea type="text"  {...register('story')} className="character-profile_story-box">
-            Escribe de dónde viene tu personaje
-          </textarea>
+          <textarea
+            type="text"
+            {...register("story", {
+              required: true,
+              minLength:200,
+              maxLength: 1000,
+            })}
+            className="character-profile_story-box"
+          />
+          {errors.story?.type === "maxLength" && (
+            <span>El límite de escritura es de 1000 caracteres</span>
+          )}
+          {errors.story?.type === "minLength" && (
+            <span>La historia debe tener como mínimo 200 caracteres</span>
+          )}
+          
         </div>
         <div className="character-image">
           <img src="" alt="" />
         </div>
-        <input type='submit' value="Guardar"/>
+        <input type="submit" value="Guardar" />
       </form>
       <div className="quiz-me">
         <h3 className="quiz-me_intro">
           La historia de Poniente la escriben los ganadores… y la estudian los
           Maestres. Durante el cumpleaños del rey Robert, los más sabios de los
           Siete Reinos se reunirán para hacer gala de su saber. ¿Te crees más
-          inteligente que ellos? ¡Descubre con este quiz si estás preparado
-          para el Concilio de Maestres!
+          inteligente que ellos? ¡Descubre con este quiz si estás preparado para
+          el Concilio de Maestres!
         </h3>
         <button
           className="quiz-me_btn"
