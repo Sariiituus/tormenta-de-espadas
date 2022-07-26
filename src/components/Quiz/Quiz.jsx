@@ -2,6 +2,7 @@ import React from "react";
 import "./Quiz.scss";
 import questions from "./QuizQuestions";
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 
 
@@ -10,7 +11,7 @@ const Quiz = ({questions}) => {
   const [score, setScore] = useState(0);
   const [isFinished, setIsFinished] = useState(false);
 
-  
+  let navigate = useNavigate();
 
   const handleAnswerSubmit = (isCorrect, ev) => {
     if (isCorrect) setScore(score +1);
@@ -55,8 +56,7 @@ const results = () => {
         <div className="results">{results()}</div>
         <br />
         <div className="btn-box">
-        <button className="results-btn" onClick={() => window.location.href="/quiz"}>Reiniciar</button>
-        <button className="results-btn" onClick={() => window.location.href="/character-profile"}>Cerrar</button>
+        <button className="results-btn" onClick={() => navigate('/character-profile')}>Cerrar</button>
         </div>
       </div>
     </div>

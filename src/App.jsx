@@ -6,6 +6,7 @@ import { allData } from "./data/data";
 import galleryData from "./components/Gallery/GalleryData.js"
 import CharacterProfile from "./components/CharacterProfile/CharacterProfile";
 
+
 const routes = getRoutes(
   allData.home,
   allData.info,
