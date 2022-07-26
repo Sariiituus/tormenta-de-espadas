@@ -1,3 +1,13 @@
+@font-face {
+    font-family: ring-bearer;
+    src: url(../../../public/assets/fonts/ring-bearer.TTF);
+}
+
+@font-face {
+    font-family: papyrus;
+    src: url(../../../public/assets/fonts/papyrus.TTF);
+}
+
 .info-container {
     display: flex;
     flex-direction: column;

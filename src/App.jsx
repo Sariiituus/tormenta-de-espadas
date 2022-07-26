@@ -4,16 +4,18 @@ import { Route, Routes, BrowserRouter as Router } from "react-router-dom";
 import { getRoutes } from "./data/routes";
 import { allData } from "./data/data";
 import galleryData from "./components/Gallery/GalleryData.js"
+import CharacterProfile from "./components/CharacterProfile/CharacterProfile";
 
 const routes = getRoutes(
   allData.home,
   allData.info,
-  galleryData
+  galleryData,
+  CharacterProfile
 );
 
 const App = () => {
 
-  let isLoggedIn = false; // TODO: Sacarlo del estado o sacarlo de redux;
+  let isLoggedIn = true; // TODO: Sacarlo del estado o sacarlo de redux;
 
   const routesToAdd = isLoggedIn ? routes.routesPrivateWebsite : routes.routesPublicWebsite;
 
