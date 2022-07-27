@@ -32,14 +32,14 @@ const CharacterProfile = () => {
               {...register("character", {
                 required: true,
                 minLength: 3,
-                maxLength: 9,
+                maxLength: 19,
               })}
             />
             {errors.character?.type === "required" && (
               <span>Se requiere nombre de personaje</span>
             )}
             {errors.character?.type === "maxLength" && (
-              <span>El nombre debe tener menos de 10 caracteres</span>
+              <span>El nombre debe tener menos de 20 caracteres</span>
             )}
             {errors.character?.type === "minLength" && (
               <span>El nombre debe tener más de 2 caracteres</span>
@@ -56,8 +56,8 @@ const CharacterProfile = () => {
                 required: true,
               })}
             >
-              <option value="female">Mujer</option>
-              <option value="male">Hombre</option>
+              <option value="mujer">Mujer</option>
+              <option value="hombre">Hombre</option>
             </select>
           </div>
           <div className="character-profile_age">
@@ -78,9 +78,9 @@ const CharacterProfile = () => {
                 required: true,
               })}
             >
-              <option value="fighter">Combatiente</option>
-              <option value="negociator">Negociador</option>
-              <option value="sage">Sabio</option>
+              <option value="combatiente">Combatiente</option>
+              <option value="negociador">Negociador</option>
+              <option value="sabio">Sabio</option>
             </select>
           </div>
           <div className="character-profile_story">
@@ -90,18 +90,18 @@ const CharacterProfile = () => {
               {...register("story", {
                 required: true,
                 minLength: 200,
-                maxLength: 1000,
+                maxLength: 500,
               })}
               className="character-profile_story-box"
             />
             {errors.story?.type === "maxLength" && (
-              <span>El límite de escritura es de 700 caracteres</span>
+              <span>El límite de escritura es de 500 caracteres</span>
             )}
             {errors.story?.type === "minLength" && (
               <span>La historia debe tener como mínimo 200 caracteres</span>
             )}
           </div>
-          <input type="submit" value="Guardar" />
+          <input type="submit" value="Guardar" className="character-profile_story-box"/>
         </form>
 
         <div class="character-profile_card">
@@ -111,7 +111,12 @@ const CharacterProfile = () => {
               alt="avatar"
               class="character-profile_card-main"
             />
-            <h2>Nombre: {watch("character")}</h2>
+            <h2>Nombre: <span className="character-profile_card-choice">{watch("character")}</span></h2>
+            <h3>Sexo: <span className="character-profile_card-choice">{watch("gender")}</span></h3>
+            <h3>Clase: <span className="character-profile_card-choice">{watch("class")}</span></h3>
+            <h3>Edad: <span className="character-profile_card-choice">{watch("age")}</span></h3>
+            <h3>Historia : <span className="character-profile_card-choice">{watch("story")}</span></h3>
+              <button className="character-profile_card-button">Descarga</button>
           </div>
         </div>
       </div>
