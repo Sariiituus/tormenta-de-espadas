@@ -14,7 +14,7 @@ const routes = getRoutes(
 );
 
 const App = () => {
-  let isLoggedIn = false; // TODO: Sacarlo del estado o sacarlo de redux;
+  let isLoggedIn = true; // TODO: Sacarlo del estado o sacarlo de redux;
 
   const routesToAdd = isLoggedIn
     ? routes.routesPrivateWebsite
@@ -42,7 +42,7 @@ const App = () => {
         </main>
 
         <footer className='app-footer'>
-          <p className='copyright'>© </p>
+          <p className='copyright'> © EpicCamp</p>
           <p className='footer-link first-link'>Cookies</p>
           <p className='footer-link'>Aviso legal</p>
           <p className='footer-link'>Política de privacidad</p>
