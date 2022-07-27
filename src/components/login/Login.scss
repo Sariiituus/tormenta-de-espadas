@@ -1,23 +1,35 @@
+@font-face {
+  font-family: ring-bearer;
+  src: url(../../../public/assets/fonts/ring-bearer.TTF);
+}
+
+@font-face {
+  font-family: papyrus;
+  src: url(../../../public/assets/fonts/papyrus.TTF);
+}
+
 .login-container {
   width: 400px;
-  background: #24303c;
+  background: #242246;
   padding: 30px;
   margin: auto;
   margin-top: 4%;
   border-radius: 4px;
   color: white;
   box-shadow: 7px 13px 37px #000;
+  
 
   h2 {
     font-size: 26px;
     margin-bottom: 10px;
     text-align: center;
+    font-family: ring-bearer;
   }
 }
 
 .btn-container {
     display: flex;
-    gap: 15px
+    gap: 15px;
 }
 
 .controls {
@@ -26,6 +38,7 @@
   border-radius: 4px;
   margin-bottom: 16px;
   font-size: 21px;
+  font-family: papyrus;
 }
 
 form p {
@@ -42,7 +55,7 @@ form p {
 
 .form .botons {
   width: 100%;
-  background: #1f53c5;
+  background: #ece3d0;;
   border: none;
   padding: 12px;
   margin: 16px 0;

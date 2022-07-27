@@ -1,12 +1,17 @@
-@import url("https://fonts.googleapis.com/css?family=Oswald:500");
+@font-face {
+  font-family: ring-bearer;
+  src: url(../../../public/assets/fonts/ring-bearer.TTF);
+}
 
-* {
-  font-family: "Oswald", sans-serif;
+@font-face {
+  font-family: papyrus;
+  src: url(../../../public/assets/fonts/papyrus.TTF);
 }
 
 .button {
   color: #ffffff;
-  background-color: #24303c;
+  font-family: papyrus;
+  background-color: #242246;
   padding: 12px 25px;
   font-size: 12px;
   letter-spacing: 1px;
@@ -58,7 +63,7 @@ input:focus {
   display: block;
   text-transform: uppercase;
   font-weight: 600;
-  font-size: 11px;
+  font-size: 12px;
   letter-spacing: 0.5px;
   color: #939393;
 }
@@ -90,6 +95,7 @@ input:focus {
 
 .modal__content h2 {
   margin-bottom: 15px;
+  font-family: ring-bearer;
 }
 
 .modal__container {
@@ -98,6 +104,7 @@ input:focus {
   min-height: 400px;
   margin-bottom: 35px;
   background-color: #ffffff;
+  font-family: papyrus;
   border-radius: 5px;
   box-shadow: 3px 3px 20px rgba(0, 0, 0, 0.1);
 }
@@ -119,10 +126,10 @@ input:focus {
   left: 0;
   height: 200%;
   width: 200%;
-  background-image: url("https://elcomercio.pe/resizer/929KWqaAUEt0Ep2QCjgEzmSCwcA=/1200x800/smart/filters:format(jpeg):quality(75)/cloudfront-us-east-1.images.arcpublishing.com/elcomercio/AQ4QCG2IIRGI3I6PWUXPWUXLPI.jpg");
+  background-image: url("https://img.pixers.pics/pho_wat(s3:700/FO/45/51/12/75/700_FO45511275_3814bcae8cf591fd86964bb3004e7176.jpg,466,700,cms:2018/10/5bd1b6b8d04b8_220x50-watermark.png,over,246,650,jpg)/mantas-de-felpa-caballero-medieval-con-una-espada.jpg.jpg");
   // background-size: 455px;
   background-repeat: no-repeat;
-  background-position: 35px 285px;
+  background-position: 140px 305px;
   border-radius: 50%;
   -ms-transform: translateX(-50%) translateY(-25%);
   transform: translateX(-50%) translateY(-25%);

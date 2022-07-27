@@ -1,24 +1,35 @@
 import React, { useState } from "react";
+import { useDispatch } from "react-redux";
+import { useNavigate } from "react-router-dom";
+import { loginUser } from "../../Redux/auth/auth.actions";
+import { API } from "../../shared/Api/Api";
 import "./Login.scss"
 
 const Login = () => {
+  const dispatch = useDispatch();
   const INITIAL_STATE = {
     email: "",
     password: ""
   };
-
+  
+  let navigate = useNavigate();
+  
   const [form, setForm] = useState(INITIAL_STATE);
-
+  
   const handleInput = (ev) => {
     const { name, value } = ev.target;
     setForm({...form, [name]: value});
   }
-
+  
   const onSubmit = (ev) => {
     ev.preventDefault();
-    localStorage.setItem("token", true);
+    API.post("users/login", form).then((res)=> {
+      console.log(res)
+      localStorage.setItem("token", res.data.token);
+      dispatch(loginUser(res.data.userDB));
+    })
   };
-
+  
   return (
     <div className="login-container">
       <h2>Iniciar Sesión</h2>
@@ -33,11 +44,12 @@ const Login = () => {
             <input type="password" onChange={handleInput} name="password" value={form.password} />
           </div>
           <div className="btn-container">
-            <input type="submit" value="Login" class="controls"/>
+            {/* <button className="controls" type="submit" onClick={() => navigate("/info")}>Login</button> */}
+            <input type="submit" value="Login" className="controls"/>
             <input type="submit" value="Has olvidado tu contraseña" className="controls"/>
           </div>
           <div>
-            <input type="submit" value="¿No tienes cuenta? Registrate" className="controls"/>
+            <button className="controls" onClick={() => navigate("/form")}>¿No tienes cuenta? Registrate</button>
           </div>
         </form>
       </div>

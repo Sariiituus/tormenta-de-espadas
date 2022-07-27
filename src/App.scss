@@ -34,8 +34,21 @@
 .app-footer {
   display: flex;
   font-family: papyrus;
-  flex-direction: column;
   background-color: #242246;
   color: white;
   padding: 2em;
+}
+
+.copyright {
+  color: black;
+  margin-left: 22%;
+}
+
+.footer-link {
+  color: #4a95ee;
+  margin-right: 2%;
+}
+
+.first-link {
+    margin-left: 20%;
 }

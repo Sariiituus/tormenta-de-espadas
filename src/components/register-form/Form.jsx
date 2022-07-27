@@ -1,20 +1,24 @@
 import React from "react";
 import { useForm } from "react-hook-form";
 import "./Form.scss";
+import { API } from "../../shared/Api/Api";
+import { useDispatch } from "react-redux";
+import { loginUser } from "../../Redux/auth/auth.actions";
 
 const Form = () => {
+  const dispatch = useDispatch();
   const {
     register,
     formState: { errors },
-    watch,
     handleSubmit,
   } = useForm();
 
   const onSubmit = (data) => {
-    console.log(data);
+    API.post("users", data).then((res) => {
+      console.log('usuario registrado', res);
+      dispatch(loginUser(res.data));
+    })
   };
-
-  const addPhone = watch("addPhone");
 
   return (
     <>
@@ -31,7 +35,7 @@ const Form = () => {
                   <label>Nombre</label>
                   <input
                     type="text"
-                    {...register("name", {
+                    {...register("userName", {
                       required: true,
                       minLength: 4,
                       maxLength: 16,
@@ -68,7 +72,7 @@ const Form = () => {
                 <div className="form-list__row form-list__row--inline">
                   <label>Contraseña</label>
                   <input
-                    type="text"
+                    type="password"
                     {...register("password", {
                       required: true,
                       pattern:
@@ -78,20 +82,6 @@ const Form = () => {
                   {errors.password?.type === "required" && ( alert ("La contraseña es un campo obligatorio"))}
                   {errors.password?.type === "required" && ( alert ("La contraseña debe tener una longitud mínima de 8 caracteres y máxima de 15, una letra mayúscula, una miniscula, un número y al menos un carácter especial ($@$!%*?&#.)")
                   )}
-                </div>
-                <div className="form-list__row form-list__row--inline">
-                  <label>Confirmar Contraseña</label>
-                  <input
-                    type="text"
-                    {...register("re-password", {
-                      required: true,
-                      pattern:
-                        /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[$@$!%*?&#.$($)$-$_])[A-Za-z\d$@$!%*?&#.$($)$-$_]{8,15}$/i,
-                    })}
-                  />
-                  {errors.password?.type === "required" && ( alert ("Confirmar contraseña es un campo obligatorio"))}
-                  {errors.password?.type === "required" && ( alert ("Confirmar contraseña debe tener una longitud mínima de 8 caracteres y máxima de 15, una letra mayúscula, una miniscula, un número y al menos un carácter especial ($@$!%*?&#.)"))}
-                  {errors.password?.type === "required" && (alert ("Confirmar contraseña debe coincidir con el campo contraseña"))}
                 </div>
                 <div className="form-list__row form-list__row--inline">
                   <label>Elige tu casa</label>
@@ -108,16 +98,10 @@ const Form = () => {
                   </select>
                   {errors.house?.type === "required" && ( alert ("Debes elegir una casa"))}
                 </div>
-                <div className="form-list__row form-list__row--agree">
-                  <label>¿Deseas incluir número telefonico?</label>
-                  <input type="checkbox" {...register("addPhone")} />
-                </div>
-                {addPhone && (
-                  <div className="form-list__row form-list__row--inline">
+                <div className="form-list__row form-list__row--inline">
                     <label>Número telefonico</label>
                     <input type="text" {...register("phone")} />
-                  </div>
-                )}
+                </div>
               </div>
               <input type="submit" value="Registarse" className="button"/>
             </form>

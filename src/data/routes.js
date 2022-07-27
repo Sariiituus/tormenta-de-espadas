@@ -69,11 +69,6 @@ export function getRoutes(datosHome, datosInfo, galleryData) {
         name: "Quiz",
         path: "/quiz",
         element: <Quiz questions={questions} />
-      },
-      {
-        name: "Logout",
-        path: "/logout",
-        element: <Home datos={datosHome} />
       }
     ]
   }
