@@ -5,6 +5,7 @@ import { getRoutes } from "./data/routes";
 import { allData } from "./data/data";
 import galleryData from "./components/Gallery/GalleryData.js";
 import CharacterProfile from "./components/CharacterProfile/CharacterProfile";
+import { useSelector } from "react-redux";
 
 const routes = getRoutes(
   allData.home,
@@ -14,7 +15,7 @@ const routes = getRoutes(
 );
 
 const App = () => {
-  let isLoggedIn = false; // TODO: Sacarlo del estado o sacarlo de redux;
+  const {isLoggedIn} = useSelector(state => state.auth);
 
   const routesToAdd = isLoggedIn
     ? routes.routesPrivateWebsite

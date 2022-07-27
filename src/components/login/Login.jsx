@@ -1,8 +1,11 @@
 import React, { useState } from "react";
+import { useDispatch } from "react-redux";
+import { loginUser } from "../../Redux/auth/auth.actions";
 import { API } from "../../shared/Api/Api";
 import "./Login.scss"
 
 const Login = () => {
+  const dispatch = useDispatch();
   const INITIAL_STATE = {
     email: "",
     password: ""
@@ -20,6 +23,7 @@ const Login = () => {
     API.post("users/login", form).then((res)=> {
       console.log(res)
       localStorage.setItem("token", res.data.token);
+      dispatch(loginUser(res.data.userDB));
     })
   };
 

@@ -1,8 +1,9 @@
-import * as actions from "./logout.actions";
+import * as actions from "./auth.actions";
 
 const INITIAL_STATE = {
   isLoggedIn: null,
-//   isLoading: false,
+  user: null,
+  isLoading: false,
   error: false,
 };
 
@@ -11,7 +12,10 @@ const logoutReducer = (state = INITIAL_STATE, action) => {
 
   switch (type) {
     case actions.LOGOUT_USER: {
-      return { ...state, isLoggedIn: false };
+      return { ...state, isLoggedIn: false, user: false };
+    }
+    case actions.LOGIN_USER: {
+      return { ...state, isLoggedIn: true, user: payload };
     }
     default: {
       return state;

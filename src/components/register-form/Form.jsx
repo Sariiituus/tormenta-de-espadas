@@ -2,8 +2,11 @@ import React from "react";
 import { useForm } from "react-hook-form";
 import "./Form.scss";
 import { API } from "../../shared/Api/Api";
+import { useDispatch } from "react-redux";
+import { loginUser } from "../../Redux/auth/auth.actions";
 
 const Form = () => {
+  const dispatch = useDispatch();
   const {
     register,
     formState: { errors },
@@ -12,7 +15,8 @@ const Form = () => {
 
   const onSubmit = (data) => {
     API.post("users", data).then((res) => {
-      console.log(res);
+      console.log('usuario registrado', res);
+      dispatch(loginUser(res.data));
     })
   };
 
