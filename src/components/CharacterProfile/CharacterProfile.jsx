@@ -25,7 +25,7 @@ const CharacterProfile = () => {
           onSubmit={handleSubmit(onSubmit)}
         >
           <div className="character-profile_name">
-            <label>Nombre</label>
+            <label className="title-small">Nombre</label>
             <input
               type="text"
               name="name"
@@ -46,14 +46,12 @@ const CharacterProfile = () => {
             )}
           </div>
           <div className="character-profile_image">
-            <label>Imagen</label>
+            <label className="title-small">Imagen</label>
             <input type="text" name="image" />
           </div>
           
-          <div className="select-wrapper">
-            <div className="select">
-              
-              <label>Sexo</label>
+          <div className="custom-select">
+              <label className="title-small">Sexo</label>
               <select className="search_categories"
                 {...register("gender", {
                   required: true,
@@ -62,12 +60,11 @@ const CharacterProfile = () => {
                 <option value="mujer">Mujer</option>
                 <option value="hombre">Hombre</option>
               </select>
-            </div>
           </div>
           
 
           <div className="character-profile_age">
-            <label>Edad</label>
+            <label className="title-small">Edad</label>
             <input
               type="number"
               {...register("age", {
@@ -76,7 +73,7 @@ const CharacterProfile = () => {
             />
           </div>
           <div className="character-profile_class">
-            <label>Clase</label>
+            <label className="title-small">Clase</label>
             <select
               defaultValue="Elige tu clase"
               className="character-profile_class"
@@ -90,7 +87,7 @@ const CharacterProfile = () => {
             </select>
           </div>
           <div className="character-profile_story">
-            <label>Historia del personaje</label>
+            <label className="title-small">Historia del personaje</label>
             <textarea
               type="text"
               {...register("story", {
