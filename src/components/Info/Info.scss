@@ -1,0 +1,54 @@
+@font-face {
+    font-family: ring-bearer;
+    src: url(../../../public/assets/fonts/ring-bearer.TTF);
+}
+
+@font-face {
+    font-family: papyrus;
+    src: url(../../../public/assets/fonts/papyrus.TTF);
+}
+
+.info-container {
+    display: flex;
+    flex-direction: column;
+    padding: 2em;
+}
+
+.info-titulo-subtitulo-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-bottom: 2em;
+}
+
+.info-titulo {
+    text-align: center;
+}
+
+.info-subtitulo {
+    text-align: center;
+}
+
+.info-contenido-container {
+    display: flex;
+    flex-direction: row;
+}
+
+.info-descripcion-container {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.info-mapa-container {
+    display: flex;
+    flex: 1;
+    justify-content: center;
+}
+
+.info-calendario-container {
+    margin-top: 2em;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}

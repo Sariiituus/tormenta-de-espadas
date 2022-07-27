@@ -1,20 +1,46 @@
-.navBar-navbar {
-    display: flex;
-    flex-direction: column;
-    flex-grow: 1;
+@font-face {
+  font-family: ring-bearer;
+  src: url(../../../public/assets/fonts/ring-bearer.TTF);
 }
 
-.navBar-menu {
+.navBar-wrapper {
     display: flex;
-    flex-grow: 1;
-    list-style-type: none;
-    justify-content: space-evenly;
-}
+    align-items: center;
 
-.navBar-menu-item {
-    & a, a:hover, a:focus, a:active {
-        text-decoration: none;
-        color: inherit;
+
+    .logo-wrapper{
+        display: flex;
+
+        .logo {
+            max-width: 20%;
+            margin: 5px 0px 5px 10px;
+            justify-content: flex-start;
+
+        }
     }
+    
+    .navBar-menu {
+        display: flex;
+        justify-content: flex-end;
+        flex-grow: 1;
+        list-style-type: none;
+
+        .navBar-menu-item {
+            & a, a:hover, a:focus, a:active {
+                font-family: ring-bearer;
+                font-size: 1.2em;
+                text-decoration: none;
+                color: black;
+                margin-right: 2em;
+            }
+        } 
+        
+    }
+
 }
+
+
+
+
+
 

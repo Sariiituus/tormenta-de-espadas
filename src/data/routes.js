@@ -1,8 +1,14 @@
 import Home from "../components/Home/Home";
 import Info from "../components/Info/Info";
 import Gallery from "../components/Gallery/Gallery";
+
 import Login from "../components/login/Login";
 import Form from "../components/register-form/Form";
+
+import Quiz from "../components/Quiz/Quiz";
+import questions from "../components/Quiz/QuizQuestions";
+import CharacterProfile from "../components/CharacterProfile/CharacterProfile";
+
 
 export function getRoutes(datosHome, datosInfo, galleryData) {
   return {
@@ -21,6 +27,11 @@ export function getRoutes(datosHome, datosInfo, galleryData) {
         name: "Galería",
         path: "/gallery",
         element: <Gallery galleryData={galleryData} />
+      },
+      {
+        name: "Quiz",
+        path: "/quiz",
+        element: <Quiz questions={questions} />
       },
       {
         name: "Formulario",
@@ -50,19 +61,14 @@ export function getRoutes(datosHome, datosInfo, galleryData) {
         element: <Gallery galleryData={galleryData} />
       },
       {
-        name: "Edita tu personaje",
-        path: "/edit",
-        element: <Home datos={datosHome} />
+        name: "Página de personaje",
+        path: "/character-profile",
+        element: <CharacterProfile characterProfile={CharacterProfile} />
       },
       {
         name: "Quiz",
         path: "/quiz",
-        element: <Home datos={datosHome} />
-      },
-      {
-        name: "Logout",
-        path: "/logout",
-        element: <Home datos={datosHome} />
+        element: <Quiz questions={questions} />
       }
     ]
   }
