@@ -44,8 +44,8 @@ const Login = () => {
             <input type="password" onChange={handleInput} name="password" value={form.password} />
           </div>
           <div className="btn-container">
-            {/* <button className="controls" type="submit" onClick={() => navigate("/info")}>Login</button> */}
-            <input type="submit" value="Login" className="controls"/>
+            <button className="controls" type="submit">Login</button>
+            {/*<input type="submit" value="Login" className="controls"/> */}
             <input type="submit" value="Has olvidado tu contraseña" className="controls"/>
           </div>
           <div>
