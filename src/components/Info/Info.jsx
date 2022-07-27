@@ -51,7 +51,7 @@ const Info = (props) => {
           </div>
           
           <a className="calendar-btn" download href='/assets/Actividades-TDE.pdf' role="button">
-          <button class="button-6" role="button">Descargar</button>
+          <button className="button-6">Descargar</button>
           </a>
         </div>
 
