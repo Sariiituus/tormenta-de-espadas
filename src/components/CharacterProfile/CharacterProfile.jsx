@@ -18,6 +18,8 @@ let navigate = useNavigate();
 
   return (
     <div className="character-profile">
+
+      
       <form
         className="character-profile_info"
         onSubmit={handleSubmit(onSubmit)}
@@ -43,6 +45,7 @@ let navigate = useNavigate();
             <span>El nombre debe tener más de 2 caracteres</span>
           )}
         </div>
+
         <select defaultValue="Elige tu género"
           className="character-profile_gender"
           {...register("gender", {
@@ -54,6 +57,8 @@ let navigate = useNavigate();
           <option value="male">Hombre</option>
           <option value="other">Otro</option>
         </select>
+
+
         <div className="character-profile_story">
           <label>Historia del personaje</label>
           <textarea
@@ -71,13 +76,18 @@ let navigate = useNavigate();
           {errors.story?.type === "minLength" && (
             <span>La historia debe tener como mínimo 200 caracteres</span>
           )}
-          
         </div>
+
+
         <div className="character-image">
           <img src="" alt="" />
         </div>
+
+
         <input type="submit" value="Guardar" />
       </form>
+
+
       <div className="quiz-me">
         <h3 className="quiz-me_intro">
           La historia de Poniente la escriben los ganadores… y la estudian los
@@ -86,6 +96,7 @@ let navigate = useNavigate();
           inteligente que ellos? ¡Descubre con este quiz si estás preparado para
           el Concilio de Maestres!
         </h3>
+
         <button
           className="quiz-me_btn"
           onClick={() => navigate('/quiz')}
@@ -93,6 +104,8 @@ let navigate = useNavigate();
           Empezar Quiz
         </button>
       </div>
+
+
     </div>
   );
 };
