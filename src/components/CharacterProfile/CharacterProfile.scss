@@ -6,6 +6,14 @@
     width: 100%;
 }
 
+.character-creator {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
 .character-profile_info {
     display: flex;
     flex-direction: column;

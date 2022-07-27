@@ -8,8 +8,9 @@ const CharacterProfile = () => {
     register,
     formState: { errors },
     handleSubmit,
+    watch,
   } = useForm();
-  
+
   let navigate = useNavigate();
 
   const onSubmit = (data) => {
@@ -18,7 +19,7 @@ const CharacterProfile = () => {
 
   return (
     <div className="character-profile">
-      <div>
+      <div className="character-creator">
         <form
           className="character-profile_info"
           onSubmit={handleSubmit(onSubmit)}
@@ -27,7 +28,7 @@ const CharacterProfile = () => {
             <label>Nombre</label>
             <input
               type="text"
-              name=""
+              name="name"
               {...register("character", {
                 required: true,
                 minLength: 3,
@@ -46,7 +47,6 @@ const CharacterProfile = () => {
           </div>
           <div className="character-profile_image">
             <label>Imagen</label>
-
             <input type="text" name="image" />
           </div>
           <div className="character-profile_gender">
@@ -104,7 +104,16 @@ const CharacterProfile = () => {
           <input type="submit" value="Guardar" />
         </form>
 
-        <div class="character-profile_card"></div>
+        <div class="character-profile_card">
+          <div class="character-profile_card-main">
+            <img
+              src={watch("image")}
+              alt="avatar"
+              class="character-profile_card-main"
+            />
+            <h2>Nombre: {watch("character")}</h2>
+          </div>
+        </div>
       </div>
 
       <div className="quiz-me">
@@ -115,12 +124,11 @@ const CharacterProfile = () => {
           inteligente que ellos? ¡Descubre con este quiz si estás preparado para
           el Concilio de Maestres!
         </h3>
-        
+
         <button className="quiz-me_btn" onClick={() => navigate("/quiz")}>
           Empezar Quiz
         </button>
-        
-        </div>
+      </div>
     </div>
   );
 };
