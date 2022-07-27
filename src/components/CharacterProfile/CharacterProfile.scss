@@ -104,29 +104,19 @@ h3 {
 .quiz-me {
   width: 95%;
   display: flex;
-  flex-direction: column;
-  align-content: flex-start;
-  justify-content: center;
-  background-color: #62816a;
-  border-radius: 8px;
-  margin-top: 20px;
 
-  .into-and-pic {
-    display: flex;
-
-    .squid-shield {
-      margin-top: 30px;
-      width: 60px;
-      height: 150px;
-    }
+  .squid-shield {
+    margin-top: 30px;
+    width: 60px;
+    height: 150px;
   }
+}
 
-  .quiz-me_intro {
-    font-family: papyrus;
-    text-align: left;
-    width: 95%;
-    margin: 30px 30px 30px 30px;
-  }
+.quiz-me_intro {
+  font-family: papyrus;
+  text-align: left;
+  width: 95%;
+  margin: 30px 30px 30px 30px;
 }
 
 .button-6 {
