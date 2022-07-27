@@ -1,0 +1,53 @@
+<svg width="280" height="322" viewBox="0 0 280 322" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g filter="url(#filter0_di_125_192)">
+<path d="M262.103 164.858C267.133 144.599 269.369 69.5048 267.133 31.9578C157.051 -5.31925 123.513 -5.31925 17.2768 31.9578C10.8488 54.3779 9.65849 138.926 17.2768 164.858C32.704 217.37 105.872 277.499 140.528 301C210.119 264.533 256.496 187.437 262.103 164.858Z" fill="#CF8D60"/>
+<path d="M262.103 164.858C267.133 144.599 269.369 69.5048 267.133 31.9578C157.051 -5.31925 123.513 -5.31925 17.2768 31.9578C10.8488 54.3779 9.65849 138.926 17.2768 164.858C32.704 217.37 105.872 277.499 140.528 301C210.119 264.533 256.496 187.437 262.103 164.858Z" stroke="white" stroke-width="6"/>
+</g>
+<g filter="url(#filter1_i_125_192)">
+<circle cx="76.5" cy="24.5" r="4.5" fill="white"/>
+<circle cx="27.5" cy="43.5" r="4.5" fill="white"/>
+<circle cx="40.5" cy="185.5" r="4.5" fill="white"/>
+<circle cx="24.5" cy="145.5" r="4.5" fill="white"/>
+<circle cx="22.5" cy="97.5" r="4.5" fill="white"/>
+<circle cx="68.5" cy="220.5" r="4.5" fill="white"/>
+<circle cx="105.5" cy="257.5" r="4.5" fill="white"/>
+<circle cx="139.5" cy="14.5" r="4.5" fill="white"/>
+<circle cx="140.5" cy="286.5" r="4.5" fill="white"/>
+<circle r="4.5" transform="matrix(-1 0 0 1 200.5 24.5)" fill="white"/>
+<circle r="4.5" transform="matrix(-1 0 0 1 249.5 43.5)" fill="white"/>
+<circle r="4.5" transform="matrix(-1 0 0 1 236.5 185.5)" fill="white"/>
+<circle r="4.5" transform="matrix(-1 0 0 1 252.5 145.5)" fill="white"/>
+<circle r="4.5" transform="matrix(-1 0 0 1 254.5 97.5)" fill="white"/>
+<circle r="4.5" transform="matrix(-1 0 0 1 212.5 220.5)" fill="white"/>
+<circle r="4.5" transform="matrix(-1 0 0 1 180.5 257.5)" fill="white"/>
+</g>
+<path d="M51.416 130.639L53.1727 125.97L56.2237 118.065L67.503 101.377L76.9796 95.2754L80.8627 94.9518L81.2787 93.2414L94.2223 83.7186L105.363 81.1761L117.151 82.2393L135.734 82.1469L151.544 79.7893L157.646 76.6459L161.621 76.877L167.769 77.9865L186.491 75.9062L190.606 74.4732L197.124 71.3298L199.343 71.0986L200.498 67.4467L204.196 62.408L205.167 63.1938L206.045 68.0014L206.323 68.6024L208.865 65.7363L213.211 62.9165L214.135 64.5806L212.748 68.1863L212.332 71.9307L213.072 72.2081L217.741 77.8478L219.682 82.979L220.098 86.3998L222.595 90.3291L222.872 90.6527L227.911 95.9688L228.419 98.1414L227.957 98.465L224.999 100.314L222.364 101.054L222.04 101.146L220.422 101.562L217.232 100.499L211.038 97.3556L206.924 98.9735L201.469 106.693L197.817 109.513L194.581 107.063L192.085 107.988L189.404 111.455V111.825L185.844 116.632L179.003 121.532L178.725 122.226L178.679 121.625L177.292 125.23L175.073 147.188L175.628 154.03L179.604 161.935L184.319 164.755L185.29 167.528L184.689 167.713V167.759L184.18 167.898L183.256 168.222H183.071L182.007 168.268L174.888 168.638L173.594 167.667L171.653 162.721L168.093 158.421L168.001 156.619L168.324 153.799L168.463 152.736L167.03 145.339L164.349 134.152L164.164 133.598L162.592 140.717L161.113 147.235L160.697 149.084L160.188 155.37L161.483 159.947L165.273 160.779L167.076 163.137L167.215 165.54L164.256 166.28L163.47 166.511L163.285 166.557L156.999 166.419L156.028 163.645L153.67 159.623L153.485 159.346L154.179 156.249L154.549 146.541L154.78 130.963L155.288 124.537H150.249L130.973 123.797L117.567 122.596L115.672 131.24L111.141 139.145L110.494 140.347L106.01 146.818L105.964 149.869L110.54 157.959L112.806 161.288L114.1 162.397L118.584 163.645L121.912 167.482L121.126 168.36L113.776 168.314L109.57 167.482L108.506 162.906L102.266 156.11L97.3657 150.286L95.7478 147.327L96.0251 144.507L98.9837 140.485L98.5214 133.459L93.4364 138.729L88.9986 143.86L88.3052 144.646L81.4636 149.823L85.1155 163.784L86.6873 166.141L91.9571 166.927L95.1006 171.226L93.6213 172.474L93.2977 172.706L92.9279 172.659L90.1543 172.243L90.0618 172.521L89.5996 173.676L89.5071 173.723L87.5193 174L82.6193 172.613L80.9551 168.638L79.1985 166.927L75.223 154.77L73.9748 146.541L75.5928 145.062L78.9211 140.855L80.0768 135.123L78.7824 128.605L77.3032 121.301L78.1815 105.908L78.8749 103.134L77.257 104.567L72.9578 114.644L67.8729 133.505L57.3331 144.692L53.8198 144.877L51 139.145L51.416 130.639Z" fill="white"/>
+<defs>
+<filter id="filter0_di_125_192" x="0" y="0" width="280" height="321.491" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+<feOffset dy="8"/>
+<feGaussianBlur stdDeviation="4.5"/>
+<feComposite in2="hardAlpha" operator="out"/>
+<feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.15 0"/>
+<feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_125_192"/>
+<feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_125_192" result="shape"/>
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+<feOffset dy="6"/>
+<feGaussianBlur stdDeviation="6.5"/>
+<feComposite in2="hardAlpha" operator="arithmetic" k2="-1" k3="1"/>
+<feColorMatrix type="matrix" values="0 0 0 0 0.466667 0 0 0 0 0.249309 0 0 0 0 0.101111 0 0 0 1 0"/>
+<feBlend mode="normal" in2="shape" result="effect2_innerShadow_125_192"/>
+</filter>
+<filter id="filter1_i_125_192" x="18" y="7" width="241" height="284" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+<feOffset dy="-3"/>
+<feGaussianBlur stdDeviation="2"/>
+<feComposite in2="hardAlpha" operator="arithmetic" k2="-1" k3="1"/>
+<feColorMatrix type="matrix" values="0 0 0 0 0.716667 0 0 0 0 0.409501 0 0 0 0 0.200069 0 0 0 1 0"/>
+<feBlend mode="normal" in2="shape" result="effect1_innerShadow_125_192"/>
+</filter>
+</defs>
+</svg>

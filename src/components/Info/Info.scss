@@ -34,8 +34,20 @@
 
 .calendar-wrapper {
     
-    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .shield {
+        width: 80px;
+        margin: 0px 20px 0px 20px;
+    }
     
+    .title-and-btn {
+        text-align: center;
+        margin: 0px 20px 0px 20px;
+
+    }
     .calendar-title {
         font-family: ring-bearer;
         

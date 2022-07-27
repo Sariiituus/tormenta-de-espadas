@@ -40,14 +40,26 @@ const Info = (props) => {
       
       <div className='calendar-wrapper'>
 
-        <div className="calendar-title">
-            <h4>Calendario de actividades</h4>
+        <div className="left-shiedls">
+          <img className='shield' src='./assets/icons/Deer-shield.png' alt="" />
+          <img className='shield' src='./assets/icons/Wolf-shield.png' alt="" />
         </div>
-        
-        <a className="calendar-btn" download href='/assets/Actividades-TDE.pdf' role="button">
-        <button class="button-6" role="button">Descargar</button>
-        </a>
-        
+
+        <div className="title-and-btn">
+          <div className="calendar-title">
+              <h4>Calendario de actividades</h4>
+          </div>
+          
+          <a className="calendar-btn" download href='/assets/Actividades-TDE.pdf' role="button">
+          <button class="button-6" role="button">Descargar</button>
+          </a>
+        </div>
+
+        <div className="right-shields">
+          <img className='shield' src='./assets/icons/Squid-shield.png' alt="" />
+          <img className='shield' src='./assets/icons/Lion-shield.png' alt="" />
+        </div>
+
       </div>
 
     </div>
