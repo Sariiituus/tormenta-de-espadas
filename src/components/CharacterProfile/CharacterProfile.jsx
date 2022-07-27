@@ -129,13 +129,18 @@ const CharacterProfile = () => {
           </div>
 
           <div className="quiz-me">
-            <h3 className="quiz-me_intro">
-            La historia de Poniente la escriben los ganadores… y la estudian los
-            Maestres. Durante el cumpleaños del rey Robert, los más sabios de los
-            Siete Reinos se reunirán para hacer gala de su saber. ¿Te crees más
-            inteligente que ellos? ¡Descubre con este quiz si estás preparado para
-            el Concilio de Maestres!
-            </h3>
+
+            <div className="into-and-pic">
+              <h3 className="quiz-me_intro">
+              La historia de Poniente la escriben los ganadores… y la estudian los
+              Maestres. Durante el cumpleaños del rey Robert, los más sabios de los
+              Siete Reinos se reunirán para hacer gala de su saber. ¿Te crees más
+              inteligente que ellos? ¡Descubre con este quiz si estás preparado para
+              el Concilio de Maestres!
+              </h3>
+              <img className='squid-shield' src='./assets/icons/squid-shield-half.png' alt='' />
+            </div>
+            
 
             <button className="button-7" onClick={() => navigate("/quiz")}>
             Empezar Quiz
