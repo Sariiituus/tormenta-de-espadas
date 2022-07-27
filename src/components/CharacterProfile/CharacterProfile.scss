@@ -9,13 +9,19 @@
 .character-profile_info {
 
     margin-top: 30px;
-    border-radius: 1px;
+    border-radius: 8px;
     background-color: #EDD396;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    width: 50%;
+    width: 30%;
+}
+
+.name-title {
+    margin-top: 20px;
+    font-family: ring-bearer;
+    font-size: 1.3em;
 }
 
 .character-profile_name {
@@ -30,6 +36,22 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
+}
+
+.character-profile-title {
+    margin-top: 20px;
+    font-family: ring-bearer;
+    font-size: 1.3em;
+}
+
+.character-profile_gender {
+    font-size: 13px;
+  padding: 10px 8px 10px 14px;
+  background: #fff;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  position: relative;
+  width: 90%;
 }
 
 .character-profile_story-box {

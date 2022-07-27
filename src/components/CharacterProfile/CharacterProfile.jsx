@@ -25,7 +25,7 @@ let navigate = useNavigate();
         onSubmit={handleSubmit(onSubmit)}
       >
         <div className="character-profile_name">
-          <label>Nombre del personaje</label>
+          <label className="name-title">Nombre del personaje</label>
           <input
             type="text"
             name=""
@@ -53,14 +53,14 @@ let navigate = useNavigate();
           })}
         >
           
-          <option value="female">Mujer</option>
+          <option value="female" selected='selected'>Mujer</option>
           <option value="male">Hombre</option>
           <option value="other">Otro</option>
         </select>
 
 
         <div className="character-profile_story">
-          <label>Historia del personaje</label>
+          <label className='character-profile-title' >Historia del personaje</label>
           <textarea
             type="text"
             {...register("story", {
