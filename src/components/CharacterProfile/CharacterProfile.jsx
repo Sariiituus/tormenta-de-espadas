@@ -2,6 +2,7 @@ import React from "react";
 import { useForm } from "react-hook-form";
 import "./CharacterProfile.scss";
 import { useNavigate } from "react-router-dom";
+import { API } from "../../shared/Api/Api";
 
 const CharacterProfile = () => {
   const {
@@ -14,7 +15,10 @@ const CharacterProfile = () => {
   let navigate = useNavigate();
 
   const onSubmit = (data) => {
-    console.log(data);
+    console.log(data);    
+      API.post("characters", data).then((res) => {
+        console.log('usuario registrado', res);
+    })
   };
 
   return (
