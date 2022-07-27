@@ -49,17 +49,23 @@ const CharacterProfile = () => {
             <label>Imagen</label>
             <input type="text" name="image" />
           </div>
-          <div className="character-profile_gender">
-            <label>Sexo</label>
-            <select
-              {...register("gender", {
-                required: true,
-              })}
-            >
-              <option value="mujer">Mujer</option>
-              <option value="hombre">Hombre</option>
-            </select>
+          
+          <div className="select-wrapper">
+            <div className="select">
+              
+              <label>Sexo</label>
+              <select className="search_categories"
+                {...register("gender", {
+                  required: true,
+                })}
+              >
+                <option value="mujer">Mujer</option>
+                <option value="hombre">Hombre</option>
+              </select>
+            </div>
           </div>
+          
+
           <div className="character-profile_age">
             <label>Edad</label>
             <input
