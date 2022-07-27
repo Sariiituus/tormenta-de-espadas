@@ -107,35 +107,42 @@ const CharacterProfile = () => {
           <input type="submit" value="Guardar" className="button-6"/>
         </form>
 
-        <div class="character-profile_card">
-          <div class="character-profile_card-main">
-            <img
-              src={watch("image")}
-              alt="avatar"
-              class="character-profile_card-main"
-            />
-            <h2>Nombre: <span className="character-profile_card-choice">{watch("character")}</span></h2>
-            <h3>Sexo: <span className="character-profile_card-choice">{watch("gender")}</span></h3>
-            <h3>Clase: <span className="character-profile_card-choice">{watch("class")}</span></h3>
-            <h3>Edad: <span className="character-profile_card-choice">{watch("age")}</span></h3>
-            <h3>Historia : <span className="character-profile_card-choice">{watch("story")}</span></h3>
-              <button className="button-6">Descarga</button>
+        <div className="info-right-side">
+
+          <div className="character-profile_card">
+            <div class="character-profile_card-info">
+              <h3>Nombre: <span className="character-profile_card-choice">{watch("character")}</span></h3>
+              <h3>Sexo: <span className="character-profile_card-choice">{watch("gender")}</span></h3>
+              <h3>Clase: <span className="character-profile_card-choice">{watch("class")}</span></h3>
+              <h3>Edad: <span className="character-profile_card-choice">{watch("age")}</span></h3>
+              <h3>Historia : <span className="character-profile_card-choice">{watch("story")}</span></h3>
+                <button className="button-6">Descarga</button>
+            </div>
+
+            <div className="character-profile_card-picture">
+              <img
+                  src={watch("image")}
+                  alt="avatar"
+                  class="character-profile_card-main"
+                />
+            </div>
           </div>
+
+          <div className="quiz-me">
+            <h3 className="quiz-me_intro">
+            La historia de Poniente la escriben los ganadores… y la estudian los
+            Maestres. Durante el cumpleaños del rey Robert, los más sabios de los
+            Siete Reinos se reunirán para hacer gala de su saber. ¿Te crees más
+            inteligente que ellos? ¡Descubre con este quiz si estás preparado para
+            el Concilio de Maestres!
+            </h3>
+
+            <button className="button-7" onClick={() => navigate("/quiz")}>
+            Empezar Quiz
+            </button>
+          </div>
+
         </div>
-      </div>
-
-      <div className="quiz-me">
-        <h3 className="quiz-me_intro">
-          La historia de Poniente la escriben los ganadores… y la estudian los
-          Maestres. Durante el cumpleaños del rey Robert, los más sabios de los
-          Siete Reinos se reunirán para hacer gala de su saber. ¿Te crees más
-          inteligente que ellos? ¡Descubre con este quiz si estás preparado para
-          el Concilio de Maestres!
-        </h3>
-
-        <button className="button-6" onClick={() => navigate("/quiz")}>
-          Empezar Quiz
-        </button>
       </div>
     </div>
   );
