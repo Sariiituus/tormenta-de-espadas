@@ -16,7 +16,7 @@ const routes = getRoutes(
 
 const App = () => {
 
-  let isLoggedIn = true; // TODO: Sacarlo del estado o sacarlo de redux;
+  let isLoggedIn = false; // TODO: Sacarlo del estado o sacarlo de redux;
 
   const routesToAdd = isLoggedIn ? routes.routesPrivateWebsite : routes.routesPublicWebsite;
 
