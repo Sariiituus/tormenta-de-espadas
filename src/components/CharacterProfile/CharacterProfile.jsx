@@ -50,7 +50,7 @@ const CharacterProfile = () => {
             <input type="text" name="image" />
           </div>
           
-          <div className="custom-select">
+          <div className="character-profile_age">
               <label className="title-small">Sexo</label>
               <select className="search_categories"
                 {...register("gender", {
@@ -104,7 +104,7 @@ const CharacterProfile = () => {
               <span>La historia debe tener como mínimo 200 caracteres</span>
             )}
           </div>
-          <input type="submit" value="Guardar" className="character-profile_story-box"/>
+          <input type="submit" value="Guardar" className="button-6"/>
         </form>
 
         <div class="character-profile_card">
@@ -119,7 +119,7 @@ const CharacterProfile = () => {
             <h3>Clase: <span className="character-profile_card-choice">{watch("class")}</span></h3>
             <h3>Edad: <span className="character-profile_card-choice">{watch("age")}</span></h3>
             <h3>Historia : <span className="character-profile_card-choice">{watch("story")}</span></h3>
-              <button className="character-profile_card-button">Descarga</button>
+              <button className="button-6">Descarga</button>
           </div>
         </div>
       </div>
@@ -133,7 +133,7 @@ const CharacterProfile = () => {
           el Concilio de Maestres!
         </h3>
 
-        <button className="quiz-me_btn" onClick={() => navigate("/quiz")}>
+        <button className="button-6" onClick={() => navigate("/quiz")}>
           Empezar Quiz
         </button>
       </div>
