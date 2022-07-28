@@ -11,7 +11,7 @@ const Info = (props) => {
 
       <div className='title'>
           { datos.titulo }
-        </div>
+      </div>
 
       <div className="info-wrapper">
 
@@ -40,15 +40,23 @@ const Info = (props) => {
       
       <div className='calendar-wrapper'>
 
-        <div className="calendar-title">
-            <h4>Calendario de actividades</h4>
+      <img className='shield' src='./assets/icons/Deer-shield.png' alt='' />
+        <img className='shield' src='./assets/icons/Lion-shield.png' alt='' />
+
+        <div className="title-and-btn">
+          <div className="calendar-title">
+              <h4>Calendario de actividades</h4>
+          </div>
+          
+          <div className="calendar-btn-wrapper">
+          <a className="calendar-btn" download href='/assets/Actividades-TDE.pdf' role="button">
+            Descargar
+            </a>
+          </div>
         </div>
-        
-        <div className="calendar-btn">
-        <a className="calendario" download href='/assets/Actividades-TDE.pdf' role="button">
-          Descargar
-          </a>
-        </div>
+
+        <img className='shield' src='./assets/icons/Squid-shield.png' alt='' />
+        <img className='shield' src='./assets/icons/Wolf-shield.png' alt='' />
 
       </div>
 
