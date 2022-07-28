@@ -63,7 +63,8 @@ const results = () => {
   )}
 
   return (
-    <div className="quiz">
+  <div className="quiz">
+
     <div className="game-box">
       <div className="question-box">
         <div className="question-number">
@@ -71,6 +72,7 @@ const results = () => {
         </div>
         <div className="question-title">{questions[actualQuestion].title}</div>
       </div>
+
       <div className="choice-box">
         {questions[actualQuestion].choices.map((choice) => (
           <button className="answer-btn" key={choice.answer} onClick={(ev) => handleAnswerSubmit(choice.isCorrect, ev)}>
@@ -79,7 +81,8 @@ const results = () => {
         ))}
       </div>
       </div>
-    </div>
+
+  </div>
   );
 }
 
