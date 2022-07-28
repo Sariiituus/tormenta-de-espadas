@@ -23,40 +23,55 @@ const Gallery = ({ galleryData }) => {
   return (
 
     <div className="gallery">
+      {/* bloque1 */}
+      <img className='shields' src='./assets/icons/Lion-shield-half.png' alt='' />
+      
+      {/* bloque2 */}
+      <div className="content">
+        <div className="gallery-header-wrapper">
+          <h1 className="gallery-header_title">Galería de Imágenes</h1>
+          <h2 className="gallery-header_subtitle">Ediciones anteriores</h2>
+        </div>
 
-      <div className="gallery-header-wrapper">
-        <h1 className="gallery-header_title">Galería de Imágenes</h1>
-        <h2 className="gallery-header_subtitle">Ediciones anteriores</h2>
+        <div className="gallery-wrapper">
+          <img className='decorations' src='./assets/icons/center-decorations.svg' alt='' />
+
+          {galleryData.map((choice, index) => {
+          return (
+            <div
+              className={index === currentImage ? "slide active" : "slide"}
+              key={index}
+            >
+              {index === currentImage && (
+                <img
+                  src={choice.image}
+                  alt="imagen edicion anterior"
+                  className="gallery-img"
+                />
+              )}
+            </div>
+          );
+          })}
+        </div>
+
+        <div className="gallery-nav">
+          <button className="gallery-nav-prev" onClick={prevImage}>
+            Anterior
+          </button>
+          
+          <button className="gallery-nav-next" onClick={nextImage}>
+            Siguiente
+          </button>
+        </div>
+
       </div>
 
-      {galleryData.map((choice, index) => {
-        return (
-          <div
-            className={index === currentImage ? "slide active" : "slide"}
-            key={index}
-          >
-            {index === currentImage && (
-              <img
-                src={choice.image}
-                alt="imagen edicion anterior"
-                className="gallery-img"
-              />
-            )}
-          </div>
-        );
-      })}
+      {/* bloque3 */}
+      <img className='shields' src='./assets/icons/Wolf-shield-half.png' alt='' />
 
-      <div className="gallery-nav">
-        <button className="gallery-nav-prev" onClick={prevImage}>
-          Anterior
-        </button>
-        
-        <button className="gallery-nav-next" onClick={nextImage}>
-          Siguiente
-        </button>
-      </div>
 
     </div>
+
   );
 };
 
