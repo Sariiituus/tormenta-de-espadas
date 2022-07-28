@@ -4,6 +4,7 @@ import "./Form.scss";
 import { API } from "../../shared/Api/Api";
 import { useDispatch } from "react-redux";
 import { loginUser } from "../../Redux/auth/auth.actions";
+// import Swal from "sweetalert2";
 
 const Form = () => {
   const dispatch = useDispatch();
@@ -43,7 +44,6 @@ const Form = () => {
                   />
                   {errors.name?.type === "required" && ( alert ("Nombre es un campo obligatorio"))}
                   {errors.name?.type === ("minLength", "maxLength") && ( alert ("Nombre debe tener un mínimo de 4 y máximo 16 caracteres"))}
-                  {/* {errors.name?.type === "maxLength" && ( alert ("Nombre debe tener un mínimo de 4 y máximo 16 caracteres"))} */}
                 </div>
                 <div className="form-list__row">
                   <label>Edad</label>
