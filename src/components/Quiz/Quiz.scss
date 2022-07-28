@@ -20,6 +20,8 @@
   gap: 8rem;
   width: 70%;
   height: 70%;
+  background-image: url('../../../public/assets/img/papyrus-paper.jpg');
+  object-fit: cover;
 }
 
 //Contenedor de la pregunta//
@@ -32,6 +34,7 @@
   align-items: flex-start;
   justify-content: center;
   width: 60%;
+  
 }
 
 
@@ -48,24 +51,31 @@
 //Botón de respuesta//
 .answer-btn {
   font-family: papyrus;
+  color: #643711;
   font-size: 25px;
   width: 100%;
+  background: none;
+  border: none;
 }
 
 .answer-btn:hover {
-  background-color: rgb(200, 200, 200);
-  transition: 0.4s;
+  transform: scale(1.2);
+  color: #442307;
 }
 
 ///Estilos en línea NO TOCAR...///
 .correct,
 .correct:hover {
-  background-color: #2f922f;
+  background-color: none;
+  color: #25690D;
+  text-decoration: underline;
 }
 
 .wrong,
 .wrong:hover {
-  background-color: #ff3333;
+  background-color: none;
+  color: #9F3C1D;
+  text-decoration: underline;
 }
 
 
@@ -74,7 +84,7 @@
 //Caja de juego terminado//
 .game-over {
   box-sizing: border-box;
-  border: 1px saddlebrown solid;
+  border: 1px #242246 solid;
   border-radius: 50px;
   display: flex;
   flex-direction: column;
@@ -90,21 +100,22 @@
 //Mensaje de puntuación//
 .results {
   font-weight: 700;
+  font-family: papyrus;
 
 }
 
 //Colores de los mensajes de puntuación//
 .results-d {
-  color:#ff3333;
+  color:#9F3C1D;
 }
 .results-c {
-  color: orange;
+  color: #C86F1D;
 }
 .results-b {
-  color: rgb(204, 255, 0);
+  color: #25690D;
 }
 .results-a {
-  color:#2f922f;
+  color:#48AC25;
 }
 
 
@@ -117,9 +128,52 @@
 }
 
 //Botones de resultados//
-.results-btn {
-  padding: 5px;
-  font-family: papyrus;
-  font-size: 25px;
 
+.results-btn {
+
+  align-items: center;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: .25rem;
+  box-shadow: rgba(0, 0, 0, 0.02) 0 1px 3px 0;
+  box-sizing: border-box;
+  background-color: #242246;
+  color: white;
+  cursor: pointer;
+  display: inline-flex;
+  font-family: papyrus;
+  font-size: 16px;
+  font-weight: 600;
+  justify-content: center;
+  line-height: 1.25;
+  min-height: 3rem;
+  padding: calc(.95rem - 1px) calc(1.8rem - 1px);
+  position: relative;
+  text-decoration: none;
+  transition: all 250ms;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  vertical-align: baseline;
+  width: auto;
+}
+
+.results-btn:hover,
+.results-btn:focus {
+  border-color: rgba(0, 0, 0, 0.15);
+  box-shadow: rgba(0, 0, 0, 0.1) 0 4px 12px;
+  background-color: #EDD396;
+  color: #242246;
+  
+}
+
+.results-btn:hover {
+  transform: translateY(-1px);
+}
+
+.results-btn:active {
+background-color: #242246;
+border-color: rgba(0, 0, 0, 0.15);
+box-shadow: rgba(0, 0, 0, 0.06) 0 2px 4px;
+color: white;
+transform: translateY(0);
 }
