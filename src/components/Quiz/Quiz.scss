@@ -21,7 +21,8 @@
   width: 70%;
   height: 70%;
   background-image: url('../../../public/assets/img/papyrus-paper.jpg');
-  object-fit: cover;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 //Contenedor de la pregunta//
