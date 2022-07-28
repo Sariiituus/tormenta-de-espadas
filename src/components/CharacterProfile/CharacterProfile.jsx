@@ -173,7 +173,7 @@ const CharacterProfile = () => {
           </div>
 
           <div className="quiz-me">
-            <div className="into-and-pic">
+            <div className="info-and-pic">
               <h3 className="quiz-me_intro">
                 La historia de Poniente la escriben los ganadores… y la estudian
                 los Maestres. Durante el cumpleaños del rey Robert, los más
@@ -187,7 +187,6 @@ const CharacterProfile = () => {
                 alt=""
               />
             </div>
-
             <button className="button-7" onClick={() => navigate("/quiz")}>
               Empezar Quiz
             </button>

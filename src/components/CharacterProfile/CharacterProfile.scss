@@ -104,11 +104,17 @@ h3 {
 .quiz-me {
   width: 95%;
   display: flex;
+  flex-direction: column;
+  margin-top: 20px;
 
   .squid-shield {
-    margin-top: 30px;
     width: 60px;
     height: 150px;
+  }
+
+  .info-and-pic {
+    display: flex;
+    align-items: center;
   }
 }
 
@@ -116,7 +122,7 @@ h3 {
   font-family: papyrus;
   text-align: left;
   width: 95%;
-  margin: 30px 30px 30px 30px;
+  margin: 20 20 20 0px;
 }
 
 .button-6 {
@@ -183,7 +189,6 @@ h3 {
   justify-content: center;
   line-height: 1.25;
   margin-bottom: 20px;
-  margin-left: 30px;
   min-height: 3rem;
   padding: calc(0.95rem - 1px) calc(1.8rem - 1px);
   position: relative;
