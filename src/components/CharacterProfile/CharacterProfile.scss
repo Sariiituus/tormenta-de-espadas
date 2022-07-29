@@ -32,6 +32,7 @@
   width: 50%;
   background-color: #edd396;
   border-radius: 8px;
+  
 }
 
 .character-profile_name {
@@ -58,6 +59,12 @@
 .character-profile_class {
   margin-bottom: 20px;
   align-items: center;
+  
+}
+
+.character-gender {
+  margin-bottom: 20px;
+  align-items: center;
 }
 
 .character-profile_story {
@@ -75,11 +82,12 @@
   box-sizing: border-box;
   display: flex;
   justify-content: space-between;
-  width: 95%;
-  height: 345px;
+  width: 50%;
+  height: 500px;
   margin-top: 20px;
   border: 2px solid #62816a;
   border-radius: 8px;
+  background-image: url(../../../public/assets/img/papyrus-paper.jpg);
 }
 
 h3 {
@@ -89,16 +97,29 @@ h3 {
 .character-profile_card-choice {
   font-family: papyrus;
   max-width: 300px;
+  text-transform: capitalize;
 }
 
-.character-profile_card-main {
-  width: 450px;
-  margin: 20px;
-}
+// .character-profile_card-main {
+//   width: 450px;
+//   margin: 20px;
+// }
 
 .character-profile_card-info {
   margin-left: 30px;
   width: 400px;
+ 
+}
+
+.character-profile_card-picture {
+  
+  max-height: 200px;
+}
+
+.character-profile_card-image {
+  border-radius: 150px;
+  height: 100%;
+  filter: sepia(1);
 }
 
 .quiz-me {

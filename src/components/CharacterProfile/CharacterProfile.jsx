@@ -3,8 +3,7 @@ import { useForm } from "react-hook-form";
 import "./CharacterProfile.scss";
 import { useNavigate } from "react-router-dom";
 import { API } from "../../shared/Api/Api";
-import { useEffect } from "react";
-import axios from "axios";
+
 
 const CharacterProfile = () => {
   const {
@@ -16,24 +15,24 @@ const CharacterProfile = () => {
 
   let navigate = useNavigate();
 
+  API.get()
+
+  // const idUser = ;
+
   const onSubmit = (formData) => {
     console.log(formData);
     API.post("characters", formData).then((res) => {
+      // const idUpdate = { character: res.data._id};
+      // API.patch("/users/" + idUser, idUpdate)
       console.log(res);
-      // const linkCharId = async (id, character) => {
-      //   const idUpdate = { character: res.id};
-      //   const {data} = await axios.patch(${REACT_APP_BACK_URL}/${id}, idUpdate);
-      //   return data;
-      // }
+      
+      }
 
 
-    });
+    );
   };
 
-  // const updateVotes = async (id, loc, voteVal) => {
-  //   const voteupdate = { inc_votes: voteVal };
-  //   const { data } = await axios.patch(${BASE_URL}/${loc}/${id}, voteupdate);
-  //return data;
+ 
   
   return (
     <div className="character-profile">
@@ -167,13 +166,13 @@ const CharacterProfile = () => {
               <img
                 src={watch("image")}
                 alt="avatar"
-                class="character-profile_card-main"
+                className="character-profile_card-image"
               />
             </div>
           </div>
 
           <div className="quiz-me">
-            <div className="info-and-pic">
+            <div className="into-and-pic">
               <h3 className="quiz-me_intro">
                 La historia de Poniente la escriben los ganadores… y la estudian
                 los Maestres. Durante el cumpleaños del rey Robert, los más
@@ -187,6 +186,7 @@ const CharacterProfile = () => {
                 alt=""
               />
             </div>
+
             <button className="button-7" onClick={() => navigate("/quiz")}>
               Empezar Quiz
             </button>
