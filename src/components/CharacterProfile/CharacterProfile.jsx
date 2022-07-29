@@ -173,12 +173,10 @@ const CharacterProfile = () => {
           </div>
 
           <div className="quiz-me">
-<<<<<<< HEAD
 
-            <div className="info-and-pic">
-=======
+
             <div className="into-and-pic">
->>>>>>> 36fbca3f59961b8e1a99da4f637ca3dd25b94830
+
               <h3 className="quiz-me_intro">
                 La historia de Poniente la escriben los ganadores… y la estudian
                 los Maestres. Durante el cumpleaños del rey Robert, los más

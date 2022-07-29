@@ -43,7 +43,7 @@ const App = () => {
         </main>
 
         <footer className='app-footer'>
-          <p className='copyright'>© </p>
+          <p className='copyright'>© EpicCamp </p>
           <p className='footer-link first-link'>Cookies</p>
           <p className='footer-link'>Aviso legal</p>
           <p className='footer-link'>Política de privacidad</p>
