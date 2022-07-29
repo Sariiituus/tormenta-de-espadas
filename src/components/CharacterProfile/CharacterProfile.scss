@@ -32,6 +32,7 @@
   width: 50%;
   background-color: #edd396;
   border-radius: 8px;
+  
 }
 
 .character-profile_name {
@@ -58,6 +59,12 @@
 .character-profile_class {
   margin-bottom: 20px;
   align-items: center;
+  
+}
+
+.character-gender {
+  margin-bottom: 20px;
+  align-items: center;
 }
 
 .character-profile_story {
@@ -75,11 +82,12 @@
   box-sizing: border-box;
   display: flex;
   justify-content: space-between;
-  width: 95%;
-  height: 345px;
+  width: 50%;
+  height: 500px;
   margin-top: 20px;
   border: 2px solid #62816a;
   border-radius: 8px;
+  background-image: url(../../../public/assets/img/papyrus-paper.jpg);
 }
 
 h3 {
@@ -87,28 +95,54 @@ h3 {
 }
 
 .character-profile_card-choice {
+  box-sizing: border-box;
   font-family: papyrus;
   max-width: 300px;
 }
 
-.character-profile_card-main {
-  width: 450px;
-  margin: 20px;
+.gender {
+  text-transform: capitalize;
 }
+
+.class {
+  text-transform: capitalize;
+}
+// .character-profile_card-main {
+//   width: 450px;
+//   margin: 20px;
+// }
 
 .character-profile_card-info {
   margin-left: 30px;
   width: 400px;
+ 
+}
+
+.character-profile_card-picture {
+  
+  max-height: 200px;
+}
+
+.character-profile_card-image {
+  border-radius: 150px;
+  height: 100%;
+  filter: sepia(1);
 }
 
 .quiz-me {
   width: 95%;
   display: flex;
+  flex-direction: column;
+  margin-top: 20px;
 
   .squid-shield {
-    margin-top: 30px;
     width: 60px;
     height: 150px;
+  }
+
+  .info-and-pic {
+    display: flex;
+    align-items: center;
   }
 }
 
@@ -116,8 +150,10 @@ h3 {
   font-family: papyrus;
   text-align: left;
   width: 95%;
-  margin: 30px 30px 30px 30px;
+  margin: 20 20 20 0px;
 }
+
+
 
 .button-6 {
   align-items: center;
@@ -183,7 +219,6 @@ h3 {
   justify-content: center;
   line-height: 1.25;
   margin-bottom: 20px;
-  margin-left: 30px;
   min-height: 3rem;
   padding: calc(0.95rem - 1px) calc(1.8rem - 1px);
   position: relative;
@@ -214,4 +249,9 @@ h3 {
   box-shadow: rgba(0, 0, 0, 0.06) 0 2px 4px;
   color: white;
   transform: translateY(0);
+}
+
+
+.background {
+  width: 100%;
 }

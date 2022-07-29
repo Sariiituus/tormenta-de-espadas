@@ -24,6 +24,12 @@
         justify-content: flex-end;
         flex-grow: 1;
         list-style-type: none;
+        
+        :hover {
+            transform: scale(1.2);
+            transition: 0.4s;
+            color: red;
+        }
 
         .navBar-menu-item {
             & a, a:hover, a:focus, a:active {
@@ -40,7 +46,15 @@
 }
 
 
-
+.logout-btn {
+    font-family: ring-bearer;
+                font-size: 1.2em;
+                text-decoration: none;
+                margin-right: 2em;
+                background: none;
+                cursor: pointer;
+                border:none;
+}
 
 
 

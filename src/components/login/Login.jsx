@@ -25,7 +25,7 @@ const Login = () => {
     ev.preventDefault();
     console.log(form);
     API.post("users/login", form).then((res)=> {
-      console.log(res.data.userDB)
+      localStorage.setItem("user", res.data.userDB._id);
       localStorage.setItem("token", res.data.token);
       dispatch(loginUser(res.data.userDB));
       navigate("/info")

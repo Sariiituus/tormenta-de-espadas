@@ -3,8 +3,7 @@ import { useForm } from "react-hook-form";
 import "./CharacterProfile.scss";
 import { useNavigate } from "react-router-dom";
 import { API } from "../../shared/Api/Api";
-import { useEffect } from "react";
-import axios from "axios";
+
 
 const CharacterProfile = () => {
   const {
@@ -16,24 +15,25 @@ const CharacterProfile = () => {
 
   let navigate = useNavigate();
 
+
+  const idUser = localStorage.getItem("user");
+
   const onSubmit = (formData) => {
     console.log(formData);
     API.post("characters", formData).then((res) => {
-      console.log(res);
-      // const linkCharId = async (id, character) => {
-      //   const idUpdate = { character: res.id};
-      //   const {data} = await axios.patch(${REACT_APP_BACK_URL}/${id}, idUpdate);
-      //   return data;
-      // }
+      const idUpdate = { character: res.data._id};
+      API.patch("users/" + idUser, idUpdate).then((res) =>{
+        console.log(res);
+      })
+      
+      
+      }
 
 
-    });
+    );
   };
 
-  // const updateVotes = async (id, loc, voteVal) => {
-  //   const voteupdate = { inc_votes: voteVal };
-  //   const { data } = await axios.patch(${BASE_URL}/${loc}/${id}, voteupdate);
-  //return data;
+ 
   
   return (
     <div className="character-profile">
@@ -138,13 +138,13 @@ const CharacterProfile = () => {
               </h3>
               <h3>
                 Sexo:{" "}
-                <span className="character-profile_card-choice">
+                <span className="character-profile_card-choice gender">
                   {watch("gender")}
                 </span>
               </h3>
               <h3>
                 Clase:{" "}
-                <span className="character-profile_card-choice">
+                <span className="character-profile_card-choice class">
                   {watch("class")}
                 </span>
               </h3>
@@ -156,7 +156,7 @@ const CharacterProfile = () => {
               </h3>
               <h3>
                 Historia :{" "}
-                <span className="character-profile_card-choice">
+                <span className="character-profile_card-choice background">
                   {watch("background")}
                 </span>
               </h3>
@@ -167,7 +167,7 @@ const CharacterProfile = () => {
               <img
                 src={watch("image")}
                 alt="avatar"
-                class="character-profile_card-main"
+                className="character-profile_card-image"
               />
             </div>
           </div>
