@@ -15,16 +15,17 @@ const CharacterProfile = () => {
 
   let navigate = useNavigate();
 
-  API.get()
 
-  // const idUser = ;
+  const idUser = localStorage.getItem("user");
 
   const onSubmit = (formData) => {
     console.log(formData);
     API.post("characters", formData).then((res) => {
-      // const idUpdate = { character: res.data._id};
-      // API.patch("/users/" + idUser, idUpdate)
-      console.log(res);
+      const idUpdate = { character: res.data._id};
+      API.patch("users/" + idUser, idUpdate).then((res) =>{
+        console.log(res);
+      })
+      
       
       }
 
@@ -137,13 +138,13 @@ const CharacterProfile = () => {
               </h3>
               <h3>
                 Sexo:{" "}
-                <span className="character-profile_card-choice">
+                <span className="character-profile_card-choice gender">
                   {watch("gender")}
                 </span>
               </h3>
               <h3>
                 Clase:{" "}
-                <span className="character-profile_card-choice">
+                <span className="character-profile_card-choice class">
                   {watch("class")}
                 </span>
               </h3>
@@ -155,7 +156,7 @@ const CharacterProfile = () => {
               </h3>
               <h3>
                 Historia :{" "}
-                <span className="character-profile_card-choice">
+                <span className="character-profile_card-choice background">
                   {watch("background")}
                 </span>
               </h3>

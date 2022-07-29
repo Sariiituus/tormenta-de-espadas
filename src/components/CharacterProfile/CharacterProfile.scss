@@ -95,11 +95,18 @@ h3 {
 }
 
 .character-profile_card-choice {
+  box-sizing: border-box;
   font-family: papyrus;
   max-width: 300px;
+}
+
+.gender {
   text-transform: capitalize;
 }
 
+.class {
+  text-transform: capitalize;
+}
 // .character-profile_card-main {
 //   width: 450px;
 //   margin: 20px;
@@ -145,6 +152,8 @@ h3 {
   width: 95%;
   margin: 20 20 20 0px;
 }
+
+
 
 .button-6 {
   align-items: center;
@@ -240,4 +249,9 @@ h3 {
   box-shadow: rgba(0, 0, 0, 0.06) 0 2px 4px;
   color: white;
   transform: translateY(0);
+}
+
+
+.background {
+  width: 100%;
 }
