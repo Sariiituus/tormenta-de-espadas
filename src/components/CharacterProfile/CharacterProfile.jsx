@@ -184,11 +184,11 @@ const CharacterProfile = () => {
                 saber. ¿Te crees más inteligente que ellos? ¡Descubre con este
                 quiz si estás preparado para el Concilio de Maestres!
               </h3>
-              <img
+              {/* <img
                 className="squid-shield"
                 src="./assets/icons/squid-shield-half.png"
                 alt=""
-              />
+              /> */}
             </div>
 
             <button className="button-7" onClick={() => navigate("/quiz")}>

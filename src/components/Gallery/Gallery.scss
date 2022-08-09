@@ -73,23 +73,16 @@
     }
 
     .gallery-nav-next:hover,
-    .gallery-nav-prev:hover,
-    .gallery-nav-next:focus,
-    .gallery-nav-prev:focus {
+    .gallery-nav-prev:hover {
         border-color: rgba(0, 0, 0, 0.15);
         box-shadow: rgba(0, 0, 0, 0.1) 0 4px 12px;
         background-color: #EDD396;
         color: #242246;
+        transform: translateY(-1px);
 
         
     }
 
-    .gallery-nav-next:hover,
-    .gallery-nav-prev:hover,
-    .gallery-nav-next:focus,
-    .gallery-nav-prev:focus {
-        transform: translateY(-1px);
-    }
 
     .gallery-nav-next:active,
     .gallery-nav-prev:active {

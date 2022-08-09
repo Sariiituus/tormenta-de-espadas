@@ -14,6 +14,11 @@ const Quiz = ({questions}) => {
   let navigate = useNavigate();
 
   const handleAnswerSubmit = (isCorrect, ev) => {
+    console.log(ev);
+    if (ev.target.classList.length > 1) {
+      return
+      
+    }
     if (isCorrect) setScore(score +1);
     ev.target.classList.add(isCorrect ? "correct" : "wrong");
     
